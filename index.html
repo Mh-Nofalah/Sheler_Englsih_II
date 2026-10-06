@@ -1,0 +1,5638 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheler's English Cabinet: Daily Talk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2A4A;
+    --ink-2:#2E4374;
+    --paper:#F5EFE1;
+    --paper-2:#EDE4CF;
+    --gold:#C9A227;
+    --gold-dim:#9c8020;
+    --sage:#5f8566;
+    --rose:#b45c52;
+    --wood:#3a2c22;
+    --wood-2:#54402f;
+    --muted:#8892a8;
+    --shadow: 0 20px 50px -20px rgba(9,14,30,.55);
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #223357 0%, transparent 60%),
+      radial-gradient(1000px 700px at 110% 10%, #24365e 0%, transparent 55%),
+      var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:32px 18px 60px;
+  }
+  .masthead{ text-align:center; margin-bottom:26px; }
+  .masthead .eyebrow{
+    font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--gold); font-weight:600;
+  }
+  .masthead h1{
+    font-family:'Lora',serif; font-weight:600;
+    font-size:clamp(24px,4vw,34px); margin:6px 0 2px; color:var(--paper);
+  }
+  .masthead .fa-title{
+    font-family:'Vazirmatn',sans-serif; direction:rtl; color:var(--muted); font-size:15px;
+  }
+
+  /* ---- Signature element: card cabinet with 5 drawers ---- */
+  .cabinet{
+    display:flex; gap:10px;
+    background:linear-gradient(180deg,var(--wood-2),var(--wood));
+    padding:14px; border-radius:14px;
+    box-shadow:var(--shadow), inset 0 0 0 1px rgba(255,255,255,.04);
+    margin-bottom:30px; max-width:920px; width:100%;
+  }
+  .drawer{
+    flex:1;
+    background:linear-gradient(180deg,#e9dfc4,#ded2ae);
+    border-radius:8px; padding:10px 8px 12px; text-align:center; position:relative;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.5), inset 0 -6px 10px -4px rgba(0,0,0,.25), 0 3px 0 rgba(0,0,0,.25);
+    transition:transform .35s ease, box-shadow .35s ease;
+    transform-origin:top;
+  }
+  .drawer .handle{ width:26px;height:5px;border-radius:3px; background:var(--gold-dim); margin:0 auto 8px; }
+  .drawer .label{
+    font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--wood); font-weight:700; opacity:.75;
+  }
+  .drawer .count{
+    font-family:'Lora',serif; font-size:22px; font-weight:600; color:var(--ink); margin-top:2px;
+  }
+  .drawer .interval{ font-size:10px; color:var(--wood-2); opacity:.7; margin-top:2px; }
+  .drawer.active{
+    transform:translateY(6px) scale(1.04);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.6), inset 0 -6px 10px -4px rgba(0,0,0,.3), 0 8px 16px -6px rgba(201,162,39,.55);
+  }
+  .drawer.active::after{
+    content:''; position:absolute; inset:-3px; border-radius:10px;
+    border:1.5px solid var(--gold); pointer-events:none;
+  }
+  .drawer.pulse{ animation: pulseDrawer .6s ease; }
+  @keyframes pulseDrawer{
+    0%{ transform:translateY(0) scale(1); }
+    40%{ transform:translateY(10px) scale(1.07); }
+    100%{ transform:translateY(6px) scale(1.04); }
+  }
+
+  .status-line{
+    display:flex; gap:18px; flex-wrap:wrap; justify-content:center;
+    font-size:13px; color:var(--muted); margin-bottom:22px;
+  }
+  .status-line b{ color:var(--paper); font-weight:600; }
+
+  .stage{ width:100%; max-width:640px; }
+  .card{
+    background:var(--paper); color:var(--ink); border-radius:18px;
+    padding:38px 32px 30px; box-shadow:var(--shadow); position:relative;
+    min-height:260px; display:flex; flex-direction:column;
+    animation: riseIn .4s ease;
+  }
+  @keyframes riseIn{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .card::before{
+    content:''; position:absolute; top:0; left:24px; right:24px; height:3px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    border-radius:0 0 3px 3px;
+  }
+  .box-tag{
+    align-self:flex-end; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--gold-dim); background:rgba(201,162,39,.12);
+    border:1px solid rgba(201,162,39,.35); padding:3px 10px; border-radius:20px;
+    margin-bottom:14px; font-family:'Inter',sans-serif; font-weight:600;
+  }
+  .fa-sentence{
+    font-family:'Vazirmatn',sans-serif; direction:rtl; text-align:right;
+    font-size:clamp(21px,3.4vw,26px); line-height:1.9; font-weight:500;
+    color:var(--ink); margin-bottom:20px;
+  }
+  .divider{ border:none; border-top:1px dashed #cfc2a2; margin:6px 0 20px; }
+  .answer-zone{ display:none; }
+  .answer-zone.show{ display:block; animation: riseIn .3s ease; }
+  .en-sentence-row{
+    display:flex; align-items:flex-start; gap:10px; margin-bottom:14px;
+  }
+  .en-sentence{
+    font-family:'Lora',serif; font-style:italic;
+    font-size:clamp(18px,2.6vw,21px); line-height:1.6; color:var(--ink-2);
+    margin:0; flex:1;
+  }
+
+  /* ---- Speaker / read-aloud button ---- */
+  .speak-btn{
+    flex-shrink:0;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:30px; height:30px; border-radius:50%;
+    background:var(--ink); color:var(--paper);
+    border:none; cursor:pointer; padding:0;
+    box-shadow:0 2px 6px rgba(27,42,74,.25);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .speak-btn svg{ width:14px; height:14px; }
+  .speak-btn:hover{ background:var(--ink-2); transform:scale(1.06); }
+  .speak-btn:active{ transform:scale(.94); }
+  .speak-btn.speaking{ background:var(--gold-dim); animation:speakPulse 1s ease-in-out infinite; }
+  @keyframes speakPulse{
+    0%,100%{ box-shadow:0 0 0 0 rgba(201,162,39,.45); }
+    50%{ box-shadow:0 0 0 6px rgba(201,162,39,0); }
+  }
+  .speak-btn-sm{ width:22px; height:22px; }
+  .speak-btn-sm svg{ width:11px; height:11px; }
+  .no-tts-note{
+    font-size:11.5px; color:var(--muted); margin-top:-6px; margin-bottom:14px;
+  }
+
+  .masthead .deck-sub{
+    font-family:'Lora',serif; font-style:italic; color:var(--paper-2);
+    opacity:.8; font-size:15px; margin-bottom:4px;
+  }
+  /* ---- Key word from the 504 book ---- */
+  .kw-row{ display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+  .kw-label{ font-size:12px; color:var(--muted); font-weight:500; }
+  .kw{
+    font-family:'Lora',serif; font-weight:600; font-size:15px;
+    color:var(--ink); background:rgba(201,162,39,.16);
+    border:1px solid rgba(201,162,39,.45); border-radius:6px; padding:2px 10px;
+  }
+
+  /* ---- Alternative phrasings ---- */
+  .alt-block{ margin-bottom:18px; }
+  .alt-title{
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-dim); font-weight:700; margin-bottom:8px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .alt-title::before{ content:'≈'; font-size:13px; }
+  .alt-list{ display:flex; flex-direction:column; gap:6px; }
+  .alt-item-row{ display:flex; align-items:center; gap:8px; }
+  .alt-item{
+    font-family:'Lora',serif; font-style:italic; font-size:14.5px;
+    color:#5b6a86; padding:7px 12px; background:#eef1f6;
+    border-left:3px solid var(--ink-2); border-radius:6px; line-height:1.5;
+    flex:1; margin:0;
+  }
+
+  .breakdown-title{
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-dim); font-weight:700; margin-bottom:8px;
+  }
+  .breakdown{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:8px; }
+  .chunk{
+    background:var(--paper-2); border:1px solid #ddd0af; border-radius:9px;
+    padding:6px 10px; font-size:13px; line-height:1.4;
+    display:flex; flex-direction:column; align-items:center; min-width:64px;
+  }
+  .chunk .cfa{ font-family:'Vazirmatn',sans-serif; direction:rtl; font-weight:600; color:var(--ink); }
+  .chunk-en-row{ display:flex; align-items:center; gap:4px; margin-top:2px; }
+  .chunk .cen{ font-family:'Inter',sans-serif; color:var(--ink-2); font-size:11.5px; }
+
+  .controls{ margin-top:24px; }
+  .btn{
+    font-family:'Inter',sans-serif; font-weight:600; font-size:14.5px;
+    border:none; border-radius:11px; padding:13px 20px; cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    width:100%;
+  }
+  .btn:active{ transform:scale(.98); }
+  .btn-reveal{ background:var(--ink); color:var(--paper); }
+  .btn-reveal:hover{ background:var(--ink-2); }
+  .self-assess{ display:flex; gap:12px; }
+  .btn-wrong{ background:#f1e2df; color:var(--rose); box-shadow:inset 0 0 0 1.5px rgba(180,92,82,.4); }
+  .btn-wrong:hover{ background:#eed3ce; }
+  .btn-right{ background:#e3ece4; color:var(--sage); box-shadow:inset 0 0 0 1.5px rgba(95,133,102,.4); }
+  .btn-right:hover{ background:#d7e5d9; }
+
+  .empty-state{ text-align:center; padding:50px 20px; }
+  .empty-state .big{ font-family:'Lora',serif; font-size:22px; margin-bottom:8px; }
+  .empty-state .small{ color:var(--muted); font-size:13.5px; }
+  .empty-state .fa-small{
+    font-family:'Vazirmatn',sans-serif; direction:rtl; margin-top:10px; color:var(--muted); font-size:14px;
+  }
+
+  .footer-row{ margin-top:26px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+  .link-btn{
+    background:none; border:none; color:var(--muted); font-size:12.5px;
+    cursor:pointer; text-decoration:underline; text-underline-offset:3px; font-family:'Inter',sans-serif;
+  }
+  .link-btn:hover{ color:var(--paper); }
+
+  /* ---- Voice picker ---- */
+  .voice-panel{
+    width:100%; max-width:640px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;
+    padding:12px 16px;
+    margin-bottom:18px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  .voice-panel label{
+    font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--gold); font-weight:600; white-space:nowrap;
+  }
+  .voice-panel select{
+    flex:1; min-width:160px;
+    background:var(--paper); color:var(--ink);
+    border:1px solid #ddd0af; border-radius:8px;
+    padding:7px 10px; font-family:'Inter',sans-serif; font-size:13px;
+    cursor:pointer;
+  }
+  .voice-panel .try-btn{
+    flex-shrink:0;
+    background:var(--gold-dim); color:var(--ink);
+    border:none; border-radius:8px; padding:7px 14px;
+    font-family:'Inter',sans-serif; font-weight:600; font-size:12.5px;
+    cursor:pointer; transition:background .15s ease;
+  }
+  .voice-panel .try-btn:hover{ background:var(--gold); }
+  .voice-panel .voice-hint{
+    width:100%; font-size:11.5px; color:var(--muted); line-height:1.5;
+  }
+
+  @media (max-width:520px){
+    .cabinet{ gap:6px; padding:10px; }
+    .drawer{ padding:8px 4px 10px; }
+    .drawer .count{ font-size:18px; }
+    .card{ padding:28px 20px 24px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="eyebrow">Deck 2: everyday conversations</div>
+  <h1>Sheler's English Cabinet</h1>
+  <div class="deck-sub">Daily Talk, built on 504 Essential Words</div>
+  <div class="fa-title">تمرین روزانه جملات انگلیسی به روش جعبه لایتنر</div>
+</div>
+
+<div class="voice-panel" id="voicePanel">
+  <label for="voiceSelect">Reading voice</label>
+  <select id="voiceSelect"></select>
+  <button type="button" class="try-btn" id="tryVoiceBtn">Test voice</button>
+  <div class="voice-hint" id="voiceHint"></div>
+</div>
+
+<div class="cabinet" id="cabinet"></div>
+<div class="status-line" id="statusLine"></div>
+
+<div class="stage">
+  <div class="card" id="card"></div>
+</div>
+
+<div class="footer-row">
+  <button class="link-btn" id="resetBtn">Reset all progress</button>
+</div>
+
+<script>
+/* =========================================================
+   1. SENTENCE DATABASE
+   -----------------------------------------------------------
+   PASTE THE 200-SENTENCE JSON ARRAY (provided separately)
+   in place of the sample entries below. Each entry needs:
+     fa  : Farsi sentence (string)
+     en  : primary English translation (string)
+     w   : the target word from "504 Absolutely Essential Words"
+     alt : array of alternative valid English phrasings (strings)
+     bd  : word/phrase-by-phrase breakdown, array of [fa, en] pairs
+   ========================================================= */
+const SENTENCES = [
+{
+"w": "abandon",
+"fa": "مجبور شدیم به خاطر باران برنامه‌ی پیک‌نیک را کلاً کنار بگذاریم.",
+"en": "We had to abandon our picnic plans because of the rain.",
+"alt": [
+"The rain forced us to give up on our picnic plans.",
+"We ended up calling off the picnic because of the rain."
+],
+"bd": [
+[
+"کنار بگذاریم",
+"abandon"
+],
+[
+"برنامه‌ی پیک‌نیک",
+"picnic plans"
+],
+[
+"به خاطر باران",
+"because of the rain"
+],
+[
+"مجبور شدیم",
+"we had to"
+]
+]
+},
+{
+"w": "keen",
+"fa": "راستش زیاد مشتاق نیستم امشب بیرون برویم؛ خیلی خسته‌ام.",
+"en": "Honestly, I'm not too keen on going out tonight; I'm exhausted.",
+"alt": [
+"To be honest, I don't really feel like going out tonight. I'm worn out.",
+"I'm not that eager to go out tonight, to be honest. I'm really tired."
+],
+"bd": [
+[
+"مشتاق نیستم",
+"not keen on"
+],
+[
+"راستش",
+"honestly"
+],
+[
+"امشب بیرون برویم",
+"going out tonight"
+],
+[
+"خیلی خسته‌ام",
+"I'm exhausted"
+]
+]
+},
+{
+"w": "jealous",
+"fa": "فکر کنم کمی حسودی‌ام شد وقتی عکس‌های سفرشان را دیدم.",
+"en": "I think I got a little jealous when I saw their vacation photos.",
+"alt": [
+"Seeing their vacation photos made me a bit jealous, I think.",
+"I'll admit I felt a twinge of jealousy looking at their trip photos."
+],
+"bd": [
+[
+"حسودی‌ام شد",
+"I got jealous"
+],
+[
+"کمی",
+"a little"
+],
+[
+"عکس‌های سفرشان",
+"their vacation photos"
+]
+]
+},
+{
+"w": "tact",
+"fa": "باید با کمی ظرافت به او بگویی که غذایش زیادی شور بود.",
+"en": "You need to tell her with a bit of tact that her food was too salty.",
+"alt": [
+"You'll have to be tactful when you tell her the food was too salty.",
+"Try to break it to her gently that her cooking was too salty."
+],
+"bd": [
+[
+"ظرافت",
+"tact"
+],
+[
+"باید به او بگویی",
+"you need to tell her"
+],
+[
+"زیادی شور",
+"too salty"
+]
+]
+},
+{
+"w": "oath",
+"fa": "او قسم خورد که دیگر هرگز سیگار نکشد، ولی دو هفته هم دوام نیاورد.",
+"en": "He took an oath never to smoke again, but it didn't even last two weeks.",
+"alt": [
+"He swore he'd never smoke again, but he didn't even last two weeks.",
+"He solemnly promised to quit smoking for good, yet it barely lasted two weeks."
+],
+"bd": [
+[
+"قسم خورد",
+"took an oath"
+],
+[
+"دیگر هرگز سیگار نکشد",
+"never to smoke again"
+],
+[
+"دو هفته هم دوام نیاورد",
+"didn't even last two weeks"
+]
+]
+},
+{
+"w": "vacant",
+"fa": "ببخشید، این صندلی خالی است یا منتظر کسی هستید؟",
+"en": "Excuse me, is this seat vacant, or are you waiting for someone?",
+"alt": [
+"Sorry, is anyone sitting here, or are you saving it for someone?",
+"Excuse me, is this seat free, or is someone joining you?"
+],
+"bd": [
+[
+"خالی",
+"vacant"
+],
+[
+"ببخشید",
+"excuse me"
+],
+[
+"این صندلی",
+"this seat"
+],
+[
+"منتظر کسی هستید",
+"waiting for someone"
+]
+]
+},
+{
+"w": "hardship",
+"fa": "سال اول مهاجرت پر از سختی بود، ولی خیلی چیزها یاد گرفتیم.",
+"en": "Our first year abroad was full of hardship, but we learned a lot.",
+"alt": [
+"The first year after moving abroad was really tough, but it taught us a lot.",
+"We went through a lot of hardship in our first year abroad, yet we learned so much."
+],
+"bd": [
+[
+"سختی",
+"hardship"
+],
+[
+"سال اول مهاجرت",
+"our first year abroad"
+],
+[
+"خیلی چیزها یاد گرفتیم",
+"we learned a lot"
+]
+]
+},
+{
+"w": "gallant",
+"fa": "خیلی جوانمردانه بود که کیسه‌های خرید آن خانم مسن را تا خانه‌اش برد.",
+"en": "It was very gallant of him to carry the old lady's grocery bags all the way home.",
+"alt": [
+"Carrying the elderly lady's grocery bags all the way home was really chivalrous of him.",
+"That was such a gentlemanly thing to do, carrying her bags home for her."
+],
+"bd": [
+[
+"جوانمردانه",
+"gallant"
+],
+[
+"کیسه‌های خرید",
+"grocery bags"
+],
+[
+"آن خانم مسن",
+"the old lady"
+],
+[
+"تا خانه‌اش",
+"all the way home"
+]
+]
+},
+{
+"w": "data",
+"fa": "اینترنت گوشی‌ام تمام شده؛ می‌شود رمز وای‌فای را بدهی؟",
+"en": "I've run out of mobile data; could you give me the Wi-Fi password?",
+"alt": [
+"My data's used up. Do you mind sharing the Wi-Fi password?",
+"I've got no data left on my phone. What's the Wi-Fi password?"
+],
+"bd": [
+[
+"اینترنت گوشی",
+"mobile data"
+],
+[
+"تمام شده",
+"I've run out of"
+],
+[
+"رمز وای‌فای",
+"the Wi-Fi password"
+]
+]
+},
+{
+"w": "unaccustomed",
+"fa": "هنوز به این همه سروصدای شهر عادت نکرده‌ام.",
+"en": "I'm still unaccustomed to all this city noise.",
+"alt": [
+"I'm still not used to all the noise in the city.",
+"All this city noise is something I haven't gotten used to yet."
+],
+"bd": [
+[
+"عادت نکرده‌ام",
+"unaccustomed to"
+],
+[
+"هنوز",
+"still"
+],
+[
+"این همه سروصدای شهر",
+"all this city noise"
+]
+]
+},
+{
+"w": "bachelor",
+"fa": "از وقتی برادرم ازدواج کرده، دیگر آن زندگی مجردی شلوغ‌پلوغ را ندارد.",
+"en": "Since my brother got married, he's left his messy bachelor life behind.",
+"alt": [
+"My brother's chaotic bachelor days ended when he got married.",
+"Ever since he tied the knot, my brother has given up his bachelor lifestyle."
+],
+"bd": [
+[
+"زندگی مجردی",
+"bachelor life"
+],
+[
+"از وقتی ازدواج کرده",
+"since he got married"
+],
+[
+"شلوغ‌پلوغ",
+"messy"
+]
+]
+},
+{
+"w": "qualify",
+"fa": "فکر نمی‌کنم برای آن وام واجد شرایط باشیم، چون درآمدمان کافی نیست.",
+"en": "I don't think we qualify for that loan, because our income isn't high enough.",
+"alt": [
+"We probably aren't eligible for that loan since we don't earn enough.",
+"Our income likely isn't enough for us to qualify for the loan."
+],
+"bd": [
+[
+"واجد شرایط باشیم",
+"we qualify"
+],
+[
+"آن وام",
+"that loan"
+],
+[
+"درآمدمان کافی نیست",
+"our income isn't high enough"
+]
+]
+},
+{
+"w": "conceal",
+"fa": "سعی کرد ناامیدی‌اش را پنهان کند، ولی از چهره‌اش معلوم بود.",
+"en": "She tried to conceal her disappointment, but it was written all over her face.",
+"alt": [
+"She tried to hide how disappointed she was, but her face gave it away.",
+"Although she tried to mask her disappointment, it showed clearly on her face."
+],
+"bd": [
+[
+"پنهان کند",
+"conceal"
+],
+[
+"ناامیدی‌اش",
+"her disappointment"
+],
+[
+"از چهره‌اش معلوم بود",
+"it was written all over her face"
+]
+]
+},
+{
+"w": "dismal",
+"fa": "هوا امروز آنقدر دلگیر است که حوصله‌ی هیچ کاری را ندارم.",
+"en": "The weather is so dismal today that I don't feel like doing anything.",
+"alt": [
+"It's such a dreary day that I have no energy for anything.",
+"With weather this miserable, I'm not in the mood for anything."
+],
+"bd": [
+[
+"دلگیر",
+"dismal"
+],
+[
+"هوا امروز",
+"the weather today"
+],
+[
+"حوصله‌ی هیچ کاری را ندارم",
+"I don't feel like doing anything"
+]
+]
+},
+{
+"w": "frigid",
+"fa": "آب استخر یخ بود؛ حتی یک دقیقه هم نتوانستم داخلش بمانم.",
+"en": "The pool water was frigid; I couldn't stay in for even a minute.",
+"alt": [
+"The pool was freezing, so I couldn't last even a minute in it.",
+"The water in the pool was ice-cold. I got out after less than a minute."
+],
+"bd": [
+[
+"یخ",
+"frigid"
+],
+[
+"آب استخر",
+"the pool water"
+],
+[
+"حتی یک دقیقه هم",
+"even a minute"
+]
+]
+},
+{
+"w": "inhabit",
+"fa": "می‌گویند سال‌هاست کسی در آن خانه‌ی قدیمی ساکن نشده است.",
+"en": "They say nobody has inhabited that old house for years.",
+"alt": [
+"Apparently no one has lived in that old house for years.",
+"Word is, that old house has been empty for years."
+],
+"bd": [
+[
+"ساکن نشده",
+"has not inhabited"
+],
+[
+"می‌گویند",
+"they say"
+],
+[
+"آن خانه‌ی قدیمی",
+"that old house"
+],
+[
+"سال‌هاست",
+"for years"
+]
+]
+},
+{
+"w": "numb",
+"fa": "انگشت‌هایم از سرما بی‌حس شده‌اند؛ بیا برویم داخل.",
+"en": "My fingers have gone numb from the cold; let's go inside.",
+"alt": [
+"I can't feel my fingers because of the cold. Let's head indoors.",
+"The cold has made my fingers numb, so let's get inside."
+],
+"bd": [
+[
+"بی‌حس شده‌اند",
+"have gone numb"
+],
+[
+"انگشت‌هایم",
+"my fingers"
+],
+[
+"از سرما",
+"from the cold"
+],
+[
+"بیا برویم داخل",
+"let's go inside"
+]
+]
+},
+{
+"w": "peril",
+"fa": "رانندگی در این مه غلیظ یعنی جانت را به خطر بیندازی.",
+"en": "Driving in this thick fog means putting your life in peril.",
+"alt": [
+"If you drive in fog this thick, you're putting your life at risk.",
+"Driving through such heavy fog is genuinely dangerous."
+],
+"bd": [
+[
+"به خطر بیندازی",
+"putting in peril"
+],
+[
+"رانندگی",
+"driving"
+],
+[
+"این مه غلیظ",
+"this thick fog"
+],
+[
+"جانت",
+"your life"
+]
+]
+},
+{
+"w": "recline",
+"fa": "می‌شود صندلی‌تان را کمی کمتر به عقب بخوابانید؟ پاهایم جا ندارد.",
+"en": "Could you recline your seat a little less? I have no legroom.",
+"alt": [
+"Would you mind not leaning your seat back so far? My legs are squashed.",
+"Could you bring your seat up a bit? I've got no room for my legs."
+],
+"bd": [
+[
+"به عقب بخوابانید",
+"recline"
+],
+[
+"صندلی‌تان",
+"your seat"
+],
+[
+"کمی کمتر",
+"a little less"
+],
+[
+"پاهایم جا ندارد",
+"I have no legroom"
+]
+]
+},
+{
+"w": "shriek",
+"fa": "بچه‌ها وقتی پدرشان را دم در دیدند، از خوشحالی جیغ کشیدند.",
+"en": "The kids shrieked with joy when they saw their dad at the door.",
+"alt": [
+"When the children spotted their father at the door, they screamed with delight.",
+"The kids let out shrieks of happiness when their dad walked in."
+],
+"bd": [
+[
+"جیغ کشیدند",
+"shrieked"
+],
+[
+"از خوشحالی",
+"with joy"
+],
+[
+"دم در",
+"at the door"
+]
+]
+},
+{
+"w": "sinister",
+"fa": "آن مرد که مدام از پشت پنجره نگاه می‌کرد، کمی حالت مرموز و ترسناکی داشت.",
+"en": "The man who kept staring through the window looked a bit sinister.",
+"alt": [
+"There was something slightly sinister about the man who kept peering through the window.",
+"The guy staring through the window gave off a creepy, threatening vibe."
+],
+"bd": [
+[
+"مرموز و ترسناک",
+"sinister"
+],
+[
+"آن مرد",
+"the man"
+],
+[
+"مدام نگاه می‌کرد",
+"kept staring"
+],
+[
+"از پشت پنجره",
+"through the window"
+]
+]
+},
+{
+"w": "tempt",
+"fa": "سعی نکن با آن کیک شکلاتی وسوسه‌ام کنی؛ قول دادم امشب شیرینی نخورم!",
+"en": "Don't try to tempt me with that chocolate cake; I promised myself no dessert tonight!",
+"alt": [
+"Stop tempting me with that chocolate cake. I said no sweets tonight!",
+"Please don't wave that chocolate cake at me. I'm skipping dessert tonight!"
+],
+"bd": [
+[
+"وسوسه‌ام کنی",
+"tempt me"
+],
+[
+"کیک شکلاتی",
+"chocolate cake"
+],
+[
+"قول دادم",
+"I promised myself"
+],
+[
+"شیرینی نخورم",
+"no dessert"
+]
+]
+},
+{
+"w": "wager",
+"fa": "شرط می‌بندم که باز هم قطار تاخیر دارد.",
+"en": "I'll wager the train is running late again.",
+"alt": [
+"I bet you the train is delayed again.",
+"I'm willing to bet the train will be late once more."
+],
+"bd": [
+[
+"شرط می‌بندم",
+"I'll wager"
+],
+[
+"باز هم",
+"again"
+],
+[
+"قطار تاخیر دارد",
+"the train is running late"
+]
+]
+},
+{
+"w": "typical",
+"fa": "این دقیقاً رفتار همیشگی اوست؛ همیشه دقیقه‌ی آخر زنگ می‌زند.",
+"en": "That's typical of him; he always calls at the last minute.",
+"alt": [
+"That's so like him, always calling at the last minute.",
+"Typical! He never calls until the very last moment."
+],
+"bd": [
+[
+"رفتار همیشگی",
+"typical"
+],
+[
+"همیشه",
+"always"
+],
+[
+"دقیقه‌ی آخر زنگ می‌زند",
+"calls at the last minute"
+]
+]
+},
+{
+"w": "minimum",
+"fa": "برای اجاره‌ی این آپارتمان، حداقل یک سال قرارداد لازم است.",
+"en": "To rent this apartment, you need a minimum one-year lease.",
+"alt": [
+"This apartment requires a lease of at least one year.",
+"The landlord insists on a one-year lease at the very least."
+],
+"bd": [
+[
+"حداقل",
+"minimum"
+],
+[
+"اجاره‌ی این آپارتمان",
+"to rent this apartment"
+],
+[
+"یک سال قرارداد",
+"one-year lease"
+]
+]
+},
+{
+"w": "scarce",
+"fa": "این روزها پرستار بچه‌ی قابل‌اعتماد واقعاً کمیاب شده است.",
+"en": "These days, reliable babysitters have become really scarce.",
+"alt": [
+"It's getting really hard to find a reliable babysitter nowadays.",
+"Trustworthy babysitters are in short supply these days."
+],
+"bd": [
+[
+"کمیاب",
+"scarce"
+],
+[
+"این روزها",
+"these days"
+],
+[
+"پرستار بچه‌ی قابل‌اعتماد",
+"reliable babysitters"
+]
+]
+},
+{
+"w": "annual",
+"fa": "مهمانی سالانه‌ی شرکت امسال در یک رستوران کنار دریا برگزار می‌شود.",
+"en": "This year, the company's annual party is being held at a seaside restaurant.",
+"alt": [
+"The firm's yearly party is at a restaurant by the sea this year.",
+"This time around, our annual work party will take place at a beachfront restaurant."
+],
+"bd": [
+[
+"سالانه",
+"annual"
+],
+[
+"مهمانی شرکت",
+"the company party"
+],
+[
+"رستوران کنار دریا",
+"seaside restaurant"
+],
+[
+"برگزار می‌شود",
+"is being held"
+]
+]
+},
+{
+"w": "persuade",
+"fa": "هرچه سعی کردم، نتوانستم قانعش کنم که با ما بیاید.",
+"en": "No matter how hard I tried, I couldn't persuade him to come with us.",
+"alt": [
+"I tried everything, but I couldn't convince him to join us.",
+"Despite all my efforts, he wouldn't be talked into coming along."
+],
+"bd": [
+[
+"قانعش کنم",
+"persuade him"
+],
+[
+"هرچه سعی کردم",
+"no matter how hard I tried"
+],
+[
+"با ما بیاید",
+"to come with us"
+]
+]
+},
+{
+"w": "essential",
+"fa": "برای این سفر، کفش راحت کاملاً ضروری است؛ کلی پیاده‌روی داریم.",
+"en": "Comfortable shoes are essential for this trip; we'll be doing tons of walking.",
+"alt": [
+"You absolutely need comfy shoes on this trip, since there'll be lots of walking.",
+"Good walking shoes are a must for this trip."
+],
+"bd": [
+[
+"ضروری",
+"essential"
+],
+[
+"کفش راحت",
+"comfortable shoes"
+],
+[
+"کلی پیاده‌روی داریم",
+"we'll be doing tons of walking"
+]
+]
+},
+{
+"w": "blend",
+"fa": "موز و توت‌فرنگی را با کمی شیر مخلوط کن تا یک اسموتی خوب درست شود.",
+"en": "Blend the banana and strawberries with a bit of milk to make a nice smoothie.",
+"alt": [
+"Put the banana and strawberries in the blender with some milk for a tasty smoothie.",
+"Blend everything with a splash of milk and you've got a great smoothie."
+],
+"bd": [
+[
+"مخلوط کن",
+"blend"
+],
+[
+"موز و توت‌فرنگی",
+"the banana and strawberries"
+],
+[
+"کمی شیر",
+"a bit of milk"
+]
+]
+},
+{
+"w": "visible",
+"fa": "لکه‌ی روی پیراهنت از دور هم کاملاً پیداست.",
+"en": "The stain on your shirt is clearly visible even from a distance.",
+"alt": [
+"You can see the stain on your shirt even from far away.",
+"That mark on your shirt is noticeable even from across the room."
+],
+"bd": [
+[
+"پیداست",
+"is visible"
+],
+[
+"لکه‌ی روی پیراهنت",
+"the stain on your shirt"
+],
+[
+"از دور هم",
+"even from a distance"
+]
+]
+},
+{
+"w": "expensive",
+"fa": "غذای این رستوران خوشمزه است، ولی برای یک ناهار معمولی زیادی گران است.",
+"en": "The food here is delicious, but it's far too expensive for an ordinary lunch.",
+"alt": [
+"This place does great food, but it's way too pricey for a normal lunch.",
+"The restaurant's food is tasty, though it costs too much for an everyday lunch."
+],
+"bd": [
+[
+"گران",
+"expensive"
+],
+[
+"خوشمزه",
+"delicious"
+],
+[
+"ناهار معمولی",
+"an ordinary lunch"
+],
+[
+"زیادی",
+"far too"
+]
+]
+},
+{
+"w": "talent",
+"fa": "دخترت واقعاً در نقاشی استعداد دارد؛ باید تشویقش کنی.",
+"en": "Your daughter really has a talent for drawing; you should encourage her.",
+"alt": [
+"Your daughter's got a real gift for drawing. You should support it.",
+"She's genuinely talented at drawing, so do encourage her."
+],
+"bd": [
+[
+"استعداد دارد",
+"has a talent"
+],
+[
+"در نقاشی",
+"for drawing"
+],
+[
+"تشویقش کنی",
+"encourage her"
+]
+]
+},
+{
+"w": "devise",
+"fa": "باید یک برنامه‌ی جدید بچینیم تا صبح‌ها اینقدر دیر نرسیم.",
+"en": "We need to devise a new plan so we're not so late every morning.",
+"alt": [
+"We have to come up with a new system so we stop running late in the mornings.",
+"Let's work out a better routine so we're not always late in the morning."
+],
+"bd": [
+[
+"بچینیم",
+"devise"
+],
+[
+"برنامه‌ی جدید",
+"a new plan"
+],
+[
+"صبح‌ها",
+"every morning"
+],
+[
+"اینقدر دیر نرسیم",
+"not be so late"
+]
+]
+},
+{
+"w": "wholesale",
+"fa": "او مواد غذایی را به قیمت عمده می‌خرد و کلی صرفه‌جویی می‌کند.",
+"en": "She buys groceries at wholesale prices and saves a lot of money.",
+"alt": [
+"She gets her groceries wholesale, which saves her a fortune.",
+"Buying food in bulk at wholesale prices saves her a ton."
+],
+"bd": [
+[
+"قیمت عمده",
+"wholesale prices"
+],
+[
+"مواد غذایی",
+"groceries"
+],
+[
+"کلی صرفه‌جویی می‌کند",
+"saves a lot"
+]
+]
+},
+{
+"w": "vapor",
+"fa": "آینه‌ی حمام بعد از دوش کاملاً از بخار پوشیده می‌شود.",
+"en": "The bathroom mirror gets completely covered in vapor after a shower.",
+"alt": [
+"After a shower, the bathroom mirror is totally steamed up.",
+"The mirror fogs up completely with steam whenever someone showers."
+],
+"bd": [
+[
+"بخار",
+"vapor"
+],
+[
+"آینه‌ی حمام",
+"the bathroom mirror"
+],
+[
+"بعد از دوش",
+"after a shower"
+]
+]
+},
+{
+"w": "eliminate",
+"fa": "باید کارهای غیرضروری را از برنامه‌ی هفته حذف کنیم تا کمی استراحت کنیم.",
+"en": "We should eliminate unnecessary tasks from our weekly schedule so we can rest a bit.",
+"alt": [
+"Let's cut out the non-essential stuff from our week so we get some rest.",
+"We need to drop a few unnecessary chores from the week to have time to relax."
+],
+"bd": [
+[
+"حذف کنیم",
+"eliminate"
+],
+[
+"کارهای غیرضروری",
+"unnecessary tasks"
+],
+[
+"برنامه‌ی هفته",
+"weekly schedule"
+],
+[
+"کمی استراحت کنیم",
+"rest a bit"
+]
+]
+},
+{
+"w": "villain",
+"fa": "در این سریال، شخصیت بدجنس از قهرمان جذاب‌تر است.",
+"en": "In this series, the villain is more interesting than the hero.",
+"alt": [
+"The bad guy in this show is honestly more compelling than the hero.",
+"In this TV series, the villain steals the show from the hero."
+],
+"bd": [
+[
+"شخصیت بدجنس",
+"the villain"
+],
+[
+"این سریال",
+"this series"
+],
+[
+"قهرمان",
+"the hero"
+],
+[
+"جذاب‌تر",
+"more interesting"
+]
+]
+},
+{
+"w": "dense",
+"fa": "جنگل آنقدر انبوه بود که نور خورشید به زمین نمی‌رسید.",
+"en": "The forest was so dense that sunlight couldn't reach the ground.",
+"alt": [
+"The woods were so thick that no sunlight got through to the ground.",
+"So dense was the forest that the sun never touched the ground."
+],
+"bd": [
+[
+"انبوه",
+"dense"
+],
+[
+"جنگل",
+"the forest"
+],
+[
+"نور خورشید",
+"sunlight"
+],
+[
+"به زمین نمی‌رسید",
+"couldn't reach the ground"
+]
+]
+},
+{
+"w": "utilize",
+"fa": "باید از فضای زیر پله بهتر استفاده کنیم؛ می‌شود آنجا انباری درست کرد.",
+"en": "We should utilize the space under the stairs better; we could turn it into storage.",
+"alt": [
+"Let's make better use of the space under the stairs, maybe as a storage area.",
+"That space under the stairs is wasted; we could use it for storage."
+],
+"bd": [
+[
+"استفاده کنیم",
+"utilize"
+],
+[
+"فضای زیر پله",
+"the space under the stairs"
+],
+[
+"انباری درست کرد",
+"turn it into storage"
+]
+]
+},
+{
+"w": "humid",
+"fa": "هوای تابستان آنجا آنقدر شرجی است که لباس‌ها به تنت می‌چسبد.",
+"en": "The summer air there is so humid that your clothes stick to you.",
+"alt": [
+"Summers there are so muggy that your clothes cling to your skin.",
+"It gets so humid in summer that your clothes stick to your body."
+],
+"bd": [
+[
+"شرجی",
+"humid"
+],
+[
+"هوای تابستان",
+"the summer air"
+],
+[
+"به تنت می‌چسبد",
+"stick to you"
+]
+]
+},
+{
+"w": "theory",
+"fa": "من یک نظریه دارم که چرا گربه همیشه ساعت پنج صبح بیدارمان می‌کند.",
+"en": "I have a theory about why the cat always wakes us up at five in the morning.",
+"alt": [
+"I've got a theory as to why the cat wakes us at 5 a.m. every day.",
+"I think I know why the cat insists on waking us up at five every morning."
+],
+"bd": [
+[
+"نظریه",
+"theory"
+],
+[
+"گربه",
+"the cat"
+],
+[
+"بیدارمان می‌کند",
+"wakes us up"
+],
+[
+"ساعت پنج صبح",
+"five in the morning"
+]
+]
+},
+{
+"w": "descend",
+"fa": "وقتی هواپیما شروع به پایین آمدن کرد، گوش‌هایم درد گرفت.",
+"en": "When the plane began to descend, my ears started to hurt.",
+"alt": [
+"My ears started aching as soon as the plane began its descent.",
+"As the plane came down, my ears began to hurt."
+],
+"bd": [
+[
+"پایین آمدن",
+"descend"
+],
+[
+"هواپیما",
+"the plane"
+],
+[
+"گوش‌هایم درد گرفت",
+"my ears started to hurt"
+]
+]
+},
+{
+"w": "circulate",
+"fa": "پنجره‌ها را باز کن تا هوا کمی در خانه جریان پیدا کند.",
+"en": "Open the windows so the air can circulate a bit through the house.",
+"alt": [
+"Let's open the windows and get some air moving through the house.",
+"Crack the windows open so fresh air can circulate."
+],
+"bd": [
+[
+"جریان پیدا کند",
+"circulate"
+],
+[
+"پنجره‌ها را باز کن",
+"open the windows"
+],
+[
+"هوا",
+"the air"
+]
+]
+},
+{
+"w": "enormous",
+"fa": "پرس‌های غذا آنقدر بزرگ بود که نصفش را با خودمان به خانه بردیم.",
+"en": "The portions were so enormous that we took half of the food home.",
+"alt": [
+"The servings were huge, so we ended up taking half home.",
+"They gave us such enormous portions that we had to get a doggy bag."
+],
+"bd": [
+[
+"آنقدر بزرگ",
+"so enormous"
+],
+[
+"پرس‌های غذا",
+"the portions"
+],
+[
+"نصفش را به خانه بردیم",
+"we took half home"
+]
+]
+},
+{
+"w": "predict",
+"fa": "هیچ‌کس نمی‌تواند پیش‌بینی کند که ترافیک امروز عصر چطور خواهد بود.",
+"en": "Nobody can predict what the traffic will be like this evening.",
+"alt": [
+"There's no telling what traffic will be like tonight.",
+"It's impossible to predict how bad the traffic will be this evening."
+],
+"bd": [
+[
+"پیش‌بینی کند",
+"predict"
+],
+[
+"هیچ‌کس نمی‌تواند",
+"nobody can"
+],
+[
+"ترافیک امروز عصر",
+"the traffic this evening"
+]
+]
+},
+{
+"w": "vanish",
+"fa": "کلیدهایم انگار غیب شده‌اند؛ مطمئنم همین‌جا گذاشته بودمشان.",
+"en": "My keys seem to have vanished; I'm sure I left them right here.",
+"alt": [
+"My keys have just disappeared. I'm certain I put them right here.",
+"It's like my keys vanished into thin air, and I know I left them here."
+],
+"bd": [
+[
+"غیب شده‌اند",
+"have vanished"
+],
+[
+"کلیدهایم",
+"my keys"
+],
+[
+"مطمئنم",
+"I'm sure"
+],
+[
+"همین‌جا گذاشته بودمشان",
+"I left them right here"
+]
+]
+},
+{
+"w": "tradition",
+"fa": "در خانواده‌ی ما سنت است که شب یلدا همه خانه‌ی مادربزرگ جمع شویم.",
+"en": "In our family, it's a tradition for everyone to gather at Grandma's on Yalda night.",
+"alt": [
+"It's a family tradition of ours to all get together at Grandma's on Yalda night.",
+"Every Yalda night, our whole family traditionally meets at Grandma's house."
+],
+"bd": [
+[
+"سنت",
+"tradition"
+],
+[
+"شب یلدا",
+"Yalda night"
+],
+[
+"خانه‌ی مادربزرگ",
+"Grandma's house"
+],
+[
+"جمع شویم",
+"to gather"
+]
+]
+},
+{
+"w": "rural",
+"fa": "بعد از سال‌ها زندگی در شهر، دلم برای آرامش زندگی روستایی تنگ شده.",
+"en": "After years of city life, I miss the peace of rural living.",
+"alt": [
+"Having lived in the city for years, I really miss the calm of the countryside.",
+"Years in the city have made me long for the quiet of rural life."
+],
+"bd": [
+[
+"روستایی",
+"rural"
+],
+[
+"دلم تنگ شده",
+"I miss"
+],
+[
+"آرامش",
+"the peace"
+],
+[
+"سال‌ها زندگی در شهر",
+"years of city life"
+]
+]
+},
+{
+"w": "burden",
+"fa": "نمی‌خواهم سربارت باشم، ولی می‌توانی امشب مراقب بچه‌ها باشی؟",
+"en": "I don't want to be a burden, but could you look after the kids tonight?",
+"alt": [
+"I hate to impose, but would you be able to watch the kids tonight?",
+"Sorry to put this on you, but could you watch the children this evening?"
+],
+"bd": [
+[
+"سربار",
+"burden"
+],
+[
+"نمی‌خواهم",
+"I don't want"
+],
+[
+"مراقب بچه‌ها باشی",
+"look after the kids"
+]
+]
+},
+{
+"w": "campus",
+"fa": "خوابگاهش داخل محوطه‌ی دانشگاه است، پس صبح‌ها لازم نیست زود بیدار شود.",
+"en": "His dorm is on campus, so he doesn't have to get up early in the morning.",
+"alt": [
+"Since he lives on campus, he can sleep in a bit longer in the mornings.",
+"Living in a campus dorm means he doesn't need an early start."
+],
+"bd": [
+[
+"محوطه‌ی دانشگاه",
+"campus"
+],
+[
+"خوابگاهش",
+"his dorm"
+],
+[
+"لازم نیست زود بیدار شود",
+"doesn't have to get up early"
+]
+]
+},
+{
+"w": "majority",
+"fa": "اکثر همسایه‌ها موافق بودند که پارکینگ را تعمیر کنیم.",
+"en": "The majority of the neighbors agreed that we should repair the parking garage.",
+"alt": [
+"Most of the neighbors were in favor of fixing the parking area.",
+"A majority of residents agreed to have the garage repaired."
+],
+"bd": [
+[
+"اکثر",
+"the majority of"
+],
+[
+"همسایه‌ها",
+"the neighbors"
+],
+[
+"موافق بودند",
+"agreed"
+],
+[
+"پارکینگ را تعمیر کنیم",
+"repair the parking garage"
+]
+]
+},
+{
+"w": "assemble",
+"fa": "سر هم کردن این کمد سه ساعت تمام طول کشید!",
+"en": "It took three whole hours to assemble this wardrobe!",
+"alt": [
+"Putting this wardrobe together took three entire hours!",
+"We spent three hours building this flat-pack wardrobe!"
+],
+"bd": [
+[
+"سر هم کردن",
+"to assemble"
+],
+[
+"این کمد",
+"this wardrobe"
+],
+[
+"سه ساعت تمام طول کشید",
+"it took three whole hours"
+]
+]
+},
+{
+"w": "explore",
+"fa": "آخر هفته می‌خواهیم محله‌های قدیمی شهر را پیاده بگردیم.",
+"en": "This weekend we want to explore the old neighborhoods of the city on foot.",
+"alt": [
+"We're planning to wander around the old parts of town on foot this weekend.",
+"This weekend, we'll explore the city's old quarters by walking around."
+],
+"bd": [
+[
+"بگردیم",
+"explore"
+],
+[
+"آخر هفته",
+"this weekend"
+],
+[
+"محله‌های قدیمی شهر",
+"the old neighborhoods of the city"
+],
+[
+"پیاده",
+"on foot"
+]
+]
+},
+{
+"w": "topic",
+"fa": "بیا موضوع را عوض کنیم؛ سر میز شام از سیاست حرف نزنیم.",
+"en": "Let's change the topic; let's not talk about politics at dinner.",
+"alt": [
+"Can we talk about something else? No politics at the dinner table, please.",
+"Let's switch topics and keep politics out of dinner."
+],
+"bd": [
+[
+"موضوع",
+"the topic"
+],
+[
+"عوض کنیم",
+"let's change"
+],
+[
+"سر میز شام",
+"at dinner"
+],
+[
+"از سیاست حرف نزنیم",
+"let's not talk about politics"
+]
+]
+},
+{
+"w": "debate",
+"fa": "بعد از کلی بحث، بالاخره تصمیم گرفتیم برای تعطیلات به ساحل برویم.",
+"en": "After a lot of debate, we finally decided to go to the beach for our vacation.",
+"alt": [
+"We went back and forth for ages, but in the end we chose the beach for our vacation.",
+"After much discussion, we settled on a beach vacation."
+],
+"bd": [
+[
+"بحث",
+"debate"
+],
+[
+"بعد از کلی",
+"after a lot of"
+],
+[
+"بالاخره تصمیم گرفتیم",
+"we finally decided"
+],
+[
+"برای تعطیلات",
+"for our vacation"
+]
+]
+},
+{
+"w": "evade",
+"fa": "هر وقت درباره‌ی پول می‌پرسم، او از جواب دادن طفره می‌رود.",
+"en": "Whenever I ask about money, he evades the question.",
+"alt": [
+"He always dodges the question whenever I bring up money.",
+"Every time I mention money, he avoids giving a straight answer."
+],
+"bd": [
+[
+"طفره می‌رود",
+"evades"
+],
+[
+"هر وقت",
+"whenever"
+],
+[
+"درباره‌ی پول می‌پرسم",
+"I ask about money"
+],
+[
+"جواب دادن",
+"answering"
+]
+]
+},
+{
+"w": "probe",
+"fa": "نمی‌خواهم زیادی کنجکاوی کنم، ولی چرا از کارت استعفا دادی؟",
+"en": "I don't want to probe too much, but why did you quit your job?",
+"alt": [
+"I don't mean to pry, but what made you leave your job?",
+"Not to be nosy, but why did you resign?"
+],
+"bd": [
+[
+"زیادی کنجکاوی کنم",
+"probe too much"
+],
+[
+"نمی‌خواهم",
+"I don't want"
+],
+[
+"از کارت استعفا دادی",
+"you quit your job"
+]
+]
+},
+{
+"w": "reform",
+"fa": "مدرسه‌ی بچه‌ها دارد برنامه‌ی ناهارش را از اساس اصلاح می‌کند.",
+"en": "The kids' school is completely reforming its lunch program.",
+"alt": [
+"The children's school is overhauling its lunch menu from top to bottom.",
+"Our kids' school is making major reforms to the way it does lunch."
+],
+"bd": [
+[
+"اصلاح می‌کند",
+"is reforming"
+],
+[
+"مدرسه‌ی بچه‌ها",
+"the kids' school"
+],
+[
+"برنامه‌ی ناهار",
+"lunch program"
+],
+[
+"از اساس",
+"completely"
+]
+]
+},
+{
+"w": "approach",
+"fa": "وقتی به خانه نزدیک شدیم، دیدیم چراغ‌ها روشن مانده‌اند.",
+"en": "As we approached the house, we noticed the lights had been left on.",
+"alt": [
+"Getting closer to the house, we saw that the lights were still on.",
+"When we neared the house, we realized someone had left the lights on."
+],
+"bd": [
+[
+"نزدیک شدیم",
+"we approached"
+],
+[
+"به خانه",
+"the house"
+],
+[
+"چراغ‌ها روشن مانده‌اند",
+"the lights had been left on"
+]
+]
+},
+{
+"w": "detect",
+"fa": "دستگاه هشدار دود چیزی تشخیص نداد، ولی هنوز بوی سوختگی می‌آید.",
+"en": "The smoke alarm didn't detect anything, but there's still a burning smell.",
+"alt": [
+"The smoke detector didn't go off, yet I can still smell something burning.",
+"Nothing was picked up by the smoke alarm, but it still smells like something's burning."
+],
+"bd": [
+[
+"تشخیص نداد",
+"didn't detect"
+],
+[
+"دستگاه هشدار دود",
+"the smoke alarm"
+],
+[
+"بوی سوختگی",
+"a burning smell"
+]
+]
+},
+{
+"w": "defect",
+"fa": "این ماشین لباسشویی یک نقص فنی دارد؛ باید پسش بدهیم.",
+"en": "This washing machine has a defect; we should send it back.",
+"alt": [
+"There's something faulty with this washing machine, so let's return it.",
+"The washing machine is defective. We need to take it back."
+],
+"bd": [
+[
+"نقص فنی",
+"defect"
+],
+[
+"ماشین لباسشویی",
+"washing machine"
+],
+[
+"پسش بدهیم",
+"send it back"
+]
+]
+},
+{
+"w": "employee",
+"fa": "کارمند فروشگاه خیلی صبور بود و همه‌ی سوال‌هایم را جواب داد.",
+"en": "The store employee was very patient and answered all my questions.",
+"alt": [
+"The sales assistant was really patient and went through all my questions.",
+"The store worker patiently answered every question I had."
+],
+"bd": [
+[
+"کارمند",
+"employee"
+],
+[
+"فروشگاه",
+"the store"
+],
+[
+"خیلی صبور بود",
+"was very patient"
+],
+[
+"همه‌ی سوال‌هایم",
+"all my questions"
+]
+]
+},
+{
+"w": "neglect",
+"fa": "این روزها آنقدر سرم شلوغ بوده که به گلدان‌های خانه نرسیده‌ام.",
+"en": "I've been so busy lately that I've neglected my houseplants.",
+"alt": [
+"I've been so swamped recently that my plants have been totally neglected.",
+"Work's kept me so busy that I haven't looked after my plants at all."
+],
+"bd": [
+[
+"نرسیده‌ام",
+"I've neglected"
+],
+[
+"این روزها",
+"lately"
+],
+[
+"سرم شلوغ بوده",
+"I've been busy"
+],
+[
+"گلدان‌های خانه",
+"my houseplants"
+]
+]
+},
+{
+"w": "deceive",
+"fa": "از ظاهرش فریب نخور؛ آن رستوران کوچک بهترین کباب شهر را دارد.",
+"en": "Don't be deceived by its appearance; that little restaurant has the best kebabs in town.",
+"alt": [
+"Don't judge by looks: that tiny place serves the best kebabs in the city.",
+"It may not look like much, but that little restaurant makes the best kebabs in town."
+],
+"bd": [
+[
+"فریب نخور",
+"don't be deceived"
+],
+[
+"از ظاهرش",
+"by its appearance"
+],
+[
+"بهترین کباب شهر",
+"the best kebabs in town"
+]
+]
+},
+{
+"w": "undoubtedly",
+"fa": "این بدون شک بهترین قهوه‌ای است که در این شهر خورده‌ام.",
+"en": "This is undoubtedly the best coffee I've had in this city.",
+"alt": [
+"Without a doubt, this is the best coffee I've had in town.",
+"This is hands down the best coffee in the city."
+],
+"bd": [
+[
+"بدون شک",
+"undoubtedly"
+],
+[
+"بهترین قهوه",
+"the best coffee"
+],
+[
+"خورده‌ام",
+"I've had"
+]
+]
+},
+{
+"w": "popular",
+"fa": "این کافه بین دانشجوها خیلی محبوب است، پس معمولاً جا پیدا نمی‌شود.",
+"en": "This café is really popular with students, so it's usually hard to find a seat.",
+"alt": [
+"Students love this café, which is why it's usually packed.",
+"Since it's so popular among students, getting a table here is tricky."
+],
+"bd": [
+[
+"محبوب",
+"popular"
+],
+[
+"بین دانشجوها",
+"with students"
+],
+[
+"جا پیدا نمی‌شود",
+"it's hard to find a seat"
+]
+]
+},
+{
+"w": "thorough",
+"fa": "قبل از اینکه آپارتمان را تحویل بدهیم، یک تمیزکاری کامل و حسابی کردیم.",
+"en": "Before handing back the apartment, we gave it a thorough cleaning.",
+"alt": [
+"We cleaned the apartment from top to bottom before giving back the keys.",
+"We did a really thorough clean before we moved out."
+],
+"bd": [
+[
+"کامل و حسابی",
+"thorough"
+],
+[
+"تمیزکاری",
+"cleaning"
+],
+[
+"آپارتمان را تحویل بدهیم",
+"handing back the apartment"
+]
+]
+},
+{
+"w": "client",
+"fa": "ببخشید دیر کردم؛ جلسه با مشتری بیشتر از حد انتظار طول کشید.",
+"en": "Sorry I'm late; the meeting with the client ran longer than expected.",
+"alt": [
+"Apologies for being late. The client meeting ran over.",
+"Sorry, my meeting with a client went on longer than I thought."
+],
+"bd": [
+[
+"مشتری",
+"client"
+],
+[
+"ببخشید دیر کردم",
+"sorry I'm late"
+],
+[
+"بیشتر از حد انتظار طول کشید",
+"ran longer than expected"
+]
+]
+},
+{
+"w": "comprehensive",
+"fa": "بیمه‌ی ماشینمان جامع است، پس خسارت را کامل پوشش می‌دهد.",
+"en": "Our car insurance is comprehensive, so it covers the damage in full.",
+"alt": [
+"We've got comprehensive car insurance, so the damage is completely covered.",
+"Since we have comprehensive coverage, the insurance will pay for all the damage."
+],
+"bd": [
+[
+"جامع",
+"comprehensive"
+],
+[
+"بیمه‌ی ماشین",
+"car insurance"
+],
+[
+"خسارت را کامل پوشش می‌دهد",
+"covers the damage in full"
+]
+]
+},
+{
+"w": "postpone",
+"fa": "می‌شود قرارمان را تا هفته‌ی بعد عقب بیندازیم؟ این هفته خیلی گرفتارم.",
+"en": "Could we postpone our plans until next week? I'm really tied up this week.",
+"alt": [
+"Would you mind if we pushed our plans back to next week? I'm swamped this week.",
+"Can we put off our get-together until next week? This week's crazy for me."
+],
+"bd": [
+[
+"عقب بیندازیم",
+"postpone"
+],
+[
+"قرارمان",
+"our plans"
+],
+[
+"تا هفته‌ی بعد",
+"until next week"
+],
+[
+"خیلی گرفتارم",
+"I'm really tied up"
+]
+]
+},
+{
+"w": "consent",
+"fa": "بدون رضایت والدین، مدرسه اجازه‌ی شرکت در اردو را نمی‌دهد.",
+"en": "Without parental consent, the school won't let children go on the field trip.",
+"alt": [
+"The school needs parents' consent before kids can join the field trip.",
+"No child can go on the field trip unless a parent signs the consent form."
+],
+"bd": [
+[
+"رضایت",
+"consent"
+],
+[
+"والدین",
+"parental"
+],
+[
+"اردو",
+"the field trip"
+],
+[
+"اجازه نمی‌دهد",
+"won't let"
+]
+]
+},
+{
+"w": "massive",
+"fa": "دیروز در سوپرمارکت یک صف خیلی طولانی بود؛ انگار همه آمده بودند خرید.",
+"en": "There was a massive line at the supermarket yesterday; it was like everyone had come shopping.",
+"alt": [
+"The supermarket line was enormous yesterday, as if the whole town was shopping.",
+"Yesterday the line at the supermarket was huge; it felt like everyone was there."
+],
+"bd": [
+[
+"خیلی طولانی",
+"massive"
+],
+[
+"صف",
+"line"
+],
+[
+"سوپرمارکت",
+"the supermarket"
+],
+[
+"انگار همه",
+"it was like everyone"
+]
+]
+},
+{
+"w": "capsule",
+"fa": "دکتر گفت این کپسول‌ها را بعد از غذا با یک لیوان آب بخورم.",
+"en": "The doctor told me to take these capsules after meals with a glass of water.",
+"alt": [
+"I'm supposed to take these capsules with water after eating, according to the doctor.",
+"The doctor said to swallow these capsules with a glass of water after food."
+],
+"bd": [
+[
+"کپسول‌ها",
+"capsules"
+],
+[
+"دکتر گفت",
+"the doctor told me"
+],
+[
+"بعد از غذا",
+"after meals"
+],
+[
+"با یک لیوان آب",
+"with a glass of water"
+]
+]
+},
+{
+"w": "preserve",
+"fa": "مادربزرگم هر تابستان آلبالو را به شکل مربا نگه می‌دارد تا زمستان بخوریم.",
+"en": "Every summer, my grandmother preserves sour cherries as jam so we can eat them in winter.",
+"alt": [
+"My grandma turns sour cherries into jam every summer so they keep until winter.",
+"Each summer, Grandma makes sour cherry preserves for us to enjoy in winter."
+],
+"bd": [
+[
+"نگه می‌دارد",
+"preserves"
+],
+[
+"آلبالو",
+"sour cherries"
+],
+[
+"به شکل مربا",
+"as jam"
+],
+[
+"تا زمستان بخوریم",
+"to eat in winter"
+]
+]
+},
+{
+"w": "denounce",
+"fa": "همه‌ی اهالی محل، بی‌توجهی شهرداری به پارک را محکوم کردند.",
+"en": "All the local residents denounced the city's neglect of the park.",
+"alt": [
+"Everyone in the neighborhood publicly criticized the city for neglecting the park.",
+"The locals spoke out against the city for letting the park fall apart."
+],
+"bd": [
+[
+"محکوم کردند",
+"denounced"
+],
+[
+"اهالی محل",
+"local residents"
+],
+[
+"بی‌توجهی شهرداری",
+"the city's neglect"
+],
+[
+"به پارک",
+"of the park"
+]
+]
+},
+{
+"w": "unique",
+"fa": "هر کدام از این ماگ‌ها دست‌ساز و منحصربه‌فرد است.",
+"en": "Each of these mugs is handmade and unique.",
+"alt": [
+"Every single one of these mugs is handmade and one of a kind.",
+"These mugs are all handmade, so no two are alike."
+],
+"bd": [
+[
+"منحصربه‌فرد",
+"unique"
+],
+[
+"هر کدام",
+"each"
+],
+[
+"ماگ‌ها",
+"mugs"
+],
+[
+"دست‌ساز",
+"handmade"
+]
+]
+},
+{
+"w": "torrent",
+"fa": "تا از ماشین پیاده شدم، باران سیل‌آسا شروع شد و خیس آب شدم.",
+"en": "The moment I got out of the car, the rain came down in torrents and I got soaked.",
+"alt": [
+"As soon as I stepped out of the car, it started pouring and I was drenched.",
+"I'd barely left the car when a torrent of rain soaked me to the skin."
+],
+"bd": [
+[
+"باران سیل‌آسا",
+"rain in torrents"
+],
+[
+"تا از ماشین پیاده شدم",
+"the moment I got out of the car"
+],
+[
+"خیس آب شدم",
+"I got soaked"
+]
+]
+},
+{
+"w": "resent",
+"fa": "او هنوز از اینکه به مهمانی دعوتش نکردیم دلخور است.",
+"en": "She still resents the fact that we didn't invite her to the party.",
+"alt": [
+"She's still bitter that we left her off the party invite list.",
+"She hasn't gotten over us not inviting her to the party."
+],
+"bd": [
+[
+"دلخور است",
+"resents"
+],
+[
+"هنوز",
+"still"
+],
+[
+"به مهمانی دعوتش نکردیم",
+"we didn't invite her to the party"
+]
+]
+},
+{
+"w": "gloomy",
+"fa": "چرا امروز اینقدر گرفته‌ای؟ اتفاقی افتاده؟",
+"en": "Why are you so gloomy today? Has something happened?",
+"alt": [
+"You seem really down today. Is everything okay?",
+"What's with the long face today? Did something happen?"
+],
+"bd": [
+[
+"گرفته",
+"gloomy"
+],
+[
+"چرا امروز",
+"why today"
+],
+[
+"اتفاقی افتاده",
+"has something happened"
+]
+]
+},
+{
+"w": "unforeseen",
+"fa": "به دلیل مشکلات پیش‌بینی‌نشده، پرواز ما سه ساعت تاخیر خورد.",
+"en": "Due to unforeseen problems, our flight was delayed by three hours.",
+"alt": [
+"Our flight was held up for three hours because of unexpected issues.",
+"Some unforeseen problems pushed our flight back by three hours."
+],
+"bd": [
+[
+"پیش‌بینی‌نشده",
+"unforeseen"
+],
+[
+"به دلیل مشکلات",
+"due to problems"
+],
+[
+"پرواز ما",
+"our flight"
+],
+[
+"سه ساعت تاخیر خورد",
+"was delayed by three hours"
+]
+]
+},
+{
+"w": "exaggerate",
+"fa": "اینقدر اغراق نکن؛ فقط ده دقیقه دیر کردم، نه یک ساعت!",
+"en": "Stop exaggerating; I was only ten minutes late, not an hour!",
+"alt": [
+"Don't blow it out of proportion. I was ten minutes late, not a whole hour!",
+"You're exaggerating. It was ten minutes, not an hour!"
+],
+"bd": [
+[
+"اغراق نکن",
+"stop exaggerating"
+],
+[
+"فقط ده دقیقه",
+"only ten minutes"
+],
+[
+"دیر کردم",
+"I was late"
+]
+]
+},
+{
+"w": "amateur",
+"fa": "او عکاس آماتور است، ولی عکس‌هایش از حرفه‌ای‌ها هم بهتر است.",
+"en": "He's an amateur photographer, but his photos are better than the professionals'.",
+"alt": [
+"He only does photography as a hobby, yet his pictures beat the pros'.",
+"Although he's an amateur, his photos outshine those of professional photographers."
+],
+"bd": [
+[
+"آماتور",
+"amateur"
+],
+[
+"عکاس",
+"photographer"
+],
+[
+"از حرفه‌ای‌ها هم بهتر",
+"better than the professionals'"
+]
+]
+},
+{
+"w": "variety",
+"fa": "این بازار محلی تنوع زیادی از میوه و سبزی تازه دارد.",
+"en": "This local market has a wide variety of fresh fruit and vegetables.",
+"alt": [
+"You'll find a great range of fresh fruit and veggies at this local market.",
+"There's a huge selection of fresh produce at this neighborhood market."
+],
+"bd": [
+[
+"تنوع زیادی",
+"a wide variety"
+],
+[
+"بازار محلی",
+"local market"
+],
+[
+"میوه و سبزی تازه",
+"fresh fruit and vegetables"
+]
+]
+},
+{
+"w": "valid",
+"fa": "متاسفانه بلیت شما فقط تا دیروز معتبر بود.",
+"en": "Unfortunately, your ticket was only valid until yesterday.",
+"alt": [
+"I'm afraid your ticket expired yesterday.",
+"Sorry, but your ticket was only good until yesterday."
+],
+"bd": [
+[
+"معتبر بود",
+"was valid"
+],
+[
+"متاسفانه",
+"unfortunately"
+],
+[
+"بلیت شما",
+"your ticket"
+],
+[
+"فقط تا دیروز",
+"only until yesterday"
+]
+]
+},
+{
+"w": "survive",
+"fa": "نمی‌دانم چطور بدون قهوه از آن جلسه‌ی سه‌ساعته جان سالم به در بردم!",
+"en": "I don't know how I survived that three-hour meeting without coffee!",
+"alt": [
+"How I got through that three-hour meeting with no coffee, I'll never know!",
+"I can't believe I made it through a three-hour meeting without any coffee!"
+],
+"bd": [
+[
+"جان سالم به در بردم",
+"I survived"
+],
+[
+"جلسه‌ی سه‌ساعته",
+"three-hour meeting"
+],
+[
+"بدون قهوه",
+"without coffee"
+]
+]
+},
+{
+"w": "weird",
+"fa": "یک صدای عجیب از موتور ماشین می‌آید؛ بهتر است ببریمش تعمیرگاه.",
+"en": "There's a weird noise coming from the car engine; we'd better take it to the mechanic.",
+"alt": [
+"The engine is making a strange sound, so we should get it checked.",
+"Something sounds odd in the engine. Let's take the car to a mechanic."
+],
+"bd": [
+[
+"عجیب",
+"weird"
+],
+[
+"صدا",
+"noise"
+],
+[
+"موتور ماشین",
+"the car engine"
+],
+[
+"تعمیرگاه",
+"the mechanic"
+]
+]
+},
+{
+"w": "prominent",
+"fa": "یک نویسنده‌ی سرشناس قرار است هفته‌ی بعد در کتابخانه‌ی محله سخنرانی کند.",
+"en": "A prominent writer is going to give a talk at the local library next week.",
+"alt": [
+"A well-known author is speaking at our neighborhood library next week.",
+"Next week, a leading novelist will give a talk at the local library."
+],
+"bd": [
+[
+"سرشناس",
+"prominent"
+],
+[
+"نویسنده",
+"writer"
+],
+[
+"کتابخانه‌ی محله",
+"the local library"
+],
+[
+"سخنرانی کند",
+"give a talk"
+]
+]
+},
+{
+"w": "security",
+"fa": "برای امنیت بیشتر، یک قفل دوم روی در ورودی نصب کردیم.",
+"en": "For extra security, we installed a second lock on the front door.",
+"alt": [
+"We put an extra lock on the front door to make the house more secure.",
+"To feel safer, we added a second lock to the front door."
+],
+"bd": [
+[
+"امنیت",
+"security"
+],
+[
+"بیشتر",
+"extra"
+],
+[
+"قفل دوم",
+"a second lock"
+],
+[
+"در ورودی",
+"the front door"
+]
+]
+},
+{
+"w": "bulky",
+"fa": "این کالسکه خیلی حجیم است؛ توی صندوق عقب ماشین جا نمی‌شود.",
+"en": "This stroller is too bulky; it won't fit in the trunk of the car.",
+"alt": [
+"The stroller is so bulky that it doesn't fit in the trunk.",
+"This stroller takes up too much space to go in the car."
+],
+"bd": [
+[
+"حجیم",
+"bulky"
+],
+[
+"کالسکه",
+"stroller"
+],
+[
+"صندوق عقب ماشین",
+"the trunk of the car"
+],
+[
+"جا نمی‌شود",
+"won't fit"
+]
+]
+},
+{
+"w": "reluctant",
+"fa": "اولش برای رفتن به آن مهمانی بی‌میل بودم، ولی آخرش خیلی خوش گذشت.",
+"en": "I was reluctant to go to the party at first, but I ended up having a great time.",
+"alt": [
+"At first I didn't really want to go to the party, but it turned out to be lots of fun.",
+"I was unwilling to go to the party initially, yet I had a wonderful time."
+],
+"bd": [
+[
+"بی‌میل بودم",
+"I was reluctant"
+],
+[
+"اولش",
+"at first"
+],
+[
+"آخرش خیلی خوش گذشت",
+"I ended up having a great time"
+]
+]
+},
+{
+"w": "obvious",
+"fa": "کاملاً معلوم بود که از هدیه خوشش نیامده، ولی مودبانه تشکر کرد.",
+"en": "It was obvious she didn't like the present, but she thanked us politely.",
+"alt": [
+"Clearly she wasn't thrilled with the gift, though she was polite enough to thank us.",
+"You could tell she didn't like the gift, yet she thanked us nicely."
+],
+"bd": [
+[
+"کاملاً معلوم بود",
+"it was obvious"
+],
+[
+"از هدیه خوشش نیامده",
+"she didn't like the present"
+],
+[
+"مودبانه تشکر کرد",
+"she thanked us politely"
+]
+]
+},
+{
+"w": "vicinity",
+"fa": "آیا داروخانه‌ی شبانه‌روزی در این حوالی هست؟",
+"en": "Is there a 24-hour pharmacy in the vicinity?",
+"alt": [
+"Is there an all-night pharmacy anywhere around here?",
+"Do you know if there's a 24-hour pharmacy nearby?"
+],
+"bd": [
+[
+"این حوالی",
+"the vicinity"
+],
+[
+"داروخانه",
+"pharmacy"
+],
+[
+"شبانه‌روزی",
+"24-hour"
+]
+]
+},
+{
+"w": "century",
+"fa": "این خانه بیش از یک قرن قدمت دارد و هنوز سالم مانده.",
+"en": "This house is over a century old and is still in good shape.",
+"alt": [
+"Despite being more than a hundred years old, the house is still in great condition.",
+"The house dates back over a century, yet it's still standing strong."
+],
+"bd": [
+[
+"قرن",
+"century"
+],
+[
+"بیش از یک",
+"over a"
+],
+[
+"قدمت دارد",
+"is old"
+],
+[
+"هنوز سالم مانده",
+"is still in good shape"
+]
+]
+},
+{
+"w": "rage",
+"fa": "وقتی دید کسی جای پارکش را گرفته، از عصبانیت منفجر شد.",
+"en": "He flew into a rage when he saw someone had taken his parking space.",
+"alt": [
+"Seeing someone in his parking spot made him furious.",
+"He totally lost it when he found someone parked in his space."
+],
+"bd": [
+[
+"از عصبانیت منفجر شد",
+"flew into a rage"
+],
+[
+"کسی",
+"someone"
+],
+[
+"جای پارکش را گرفته",
+"had taken his parking space"
+]
+]
+},
+{
+"w": "document",
+"fa": "یادت نرود همه‌ی مدارک لازم را برای وقت سفارت با خودت ببری.",
+"en": "Don't forget to bring all the necessary documents to your embassy appointment.",
+"alt": [
+"Make sure you take all the required documents to the embassy appointment.",
+"Remember to have all your paperwork with you for the embassy appointment."
+],
+"bd": [
+[
+"مدارک",
+"documents"
+],
+[
+"یادت نرود",
+"don't forget"
+],
+[
+"لازم",
+"necessary"
+],
+[
+"وقت سفارت",
+"embassy appointment"
+]
+]
+},
+{
+"w": "conclude",
+"fa": "بعد از دیدن قبض برق، به این نتیجه رسیدیم که باید کمتر از بخاری برقی استفاده کنیم.",
+"en": "After seeing the electricity bill, we concluded that we should use the electric heater less.",
+"alt": [
+"One look at the electric bill convinced us to cut back on the heater.",
+"The electricity bill made us realize we need to use the electric heater less."
+],
+"bd": [
+[
+"به این نتیجه رسیدیم",
+"we concluded"
+],
+[
+"قبض برق",
+"the electricity bill"
+],
+[
+"بخاری برقی",
+"the electric heater"
+],
+[
+"کمتر استفاده کنیم",
+"use less"
+]
+]
+},
+{
+"w": "undeniable",
+"fa": "انکارناپذیر است که بچه‌ها این روزها زیادی پای صفحه‌ی گوشی هستند.",
+"en": "It's undeniable that kids spend far too much time on screens these days.",
+"alt": [
+"There's no denying that children spend too much time on their phones nowadays.",
+"You can't argue with the fact that kids are glued to screens these days."
+],
+"bd": [
+[
+"انکارناپذیر است",
+"it's undeniable"
+],
+[
+"بچه‌ها",
+"kids"
+],
+[
+"زیادی پای صفحه‌ی گوشی",
+"too much time on screens"
+]
+]
+},
+{
+"w": "resist",
+"fa": "هر بار از جلوی آن نانوایی رد می‌شوم، نمی‌توانم در برابر بوی نان تازه مقاومت کنم.",
+"en": "Every time I walk past that bakery, I can't resist the smell of fresh bread.",
+"alt": [
+"Whenever I pass that bakery, the smell of fresh bread is impossible to resist.",
+"I always give in to the smell of fresh bread when I walk by that bakery."
+],
+"bd": [
+[
+"مقاومت کنم",
+"resist"
+],
+[
+"هر بار",
+"every time"
+],
+[
+"آن نانوایی",
+"that bakery"
+],
+[
+"بوی نان تازه",
+"the smell of fresh bread"
+]
+]
+},
+{
+"w": "lack",
+"fa": "مشکل اصلی من کمبود خواب است، نه کمبود انگیزه.",
+"en": "My main problem is a lack of sleep, not a lack of motivation.",
+"alt": [
+"What I'm really short on is sleep, not motivation.",
+"It's not that I'm unmotivated; I just don't get enough sleep."
+],
+"bd": [
+[
+"کمبود",
+"lack of"
+],
+[
+"مشکل اصلی من",
+"my main problem"
+],
+[
+"خواب",
+"sleep"
+],
+[
+"انگیزه",
+"motivation"
+]
+]
+},
+{
+"w": "ignore",
+"fa": "پیام‌هایم را نادیده نگیر؛ می‌بینم که آنلاینی!",
+"en": "Don't ignore my messages; I can see you're online!",
+"alt": [
+"Stop ignoring my texts. I know you're online!",
+"Quit leaving me on read. I can see you're online!"
+],
+"bd": [
+[
+"نادیده نگیر",
+"don't ignore"
+],
+[
+"پیام‌هایم",
+"my messages"
+],
+[
+"می‌بینم که آنلاینی",
+"I can see you're online"
+]
+]
+},
+{
+"w": "challenge",
+"fa": "یاد گرفتن رانندگی در خیابان‌های شلوغ برای من یک چالش واقعی بود.",
+"en": "Learning to drive on busy streets was a real challenge for me.",
+"alt": [
+"Getting used to driving in heavy traffic was genuinely challenging for me.",
+"Driving on crowded streets was a real test for me when I was learning."
+],
+"bd": [
+[
+"چالش",
+"challenge"
+],
+[
+"یاد گرفتن رانندگی",
+"learning to drive"
+],
+[
+"خیابان‌های شلوغ",
+"busy streets"
+],
+[
+"واقعی",
+"real"
+]
+]
+},
+{
+"w": "miniature",
+"fa": "پسرش از بچگی ماشین‌های مینیاتوری جمع می‌کند و حالا یک کلکسیون بزرگ دارد.",
+"en": "His son has been collecting miniature cars since he was little and now has a huge collection.",
+"alt": [
+"Since childhood, his son has collected tiny model cars, and the collection is now enormous.",
+"His son started collecting miniature cars as a little boy and has built up quite a collection."
+],
+"bd": [
+[
+"مینیاتوری",
+"miniature"
+],
+[
+"پسرش",
+"his son"
+],
+[
+"از بچگی",
+"since he was little"
+],
+[
+"کلکسیون بزرگ",
+"a huge collection"
+]
+]
+},
+{
+"w": "source",
+"fa": "منبع این شایعه کجاست؟ من که چیزی نشنیده بودم.",
+"en": "What's the source of this rumor? I hadn't heard anything about it.",
+"alt": [
+"Where did this rumor come from? This is the first I've heard of it.",
+"Who started this rumor? I knew nothing about it."
+],
+"bd": [
+[
+"منبع",
+"source"
+],
+[
+"این شایعه",
+"this rumor"
+],
+[
+"چیزی نشنیده بودم",
+"I hadn't heard anything"
+]
+]
+},
+{
+"w": "excel",
+"fa": "او همیشه در ریاضی عالی بوده، ولی با زبان مشکل دارد.",
+"en": "She's always excelled at math, but she struggles with languages.",
+"alt": [
+"Math has always been her strong suit, although languages are hard for her.",
+"She's brilliant at math but finds languages tough."
+],
+"bd": [
+[
+"عالی بوده",
+"has excelled"
+],
+[
+"در ریاضی",
+"at math"
+],
+[
+"با زبان مشکل دارد",
+"struggles with languages"
+]
+]
+},
+{
+"w": "mount",
+"fa": "استرس کار در این چند هفته‌ی اخیر مدام بیشتر شده است.",
+"en": "Work stress has been mounting over the past few weeks.",
+"alt": [
+"The pressure at work has kept building up these last few weeks.",
+"Stress at work has been piling up recently."
+],
+"bd": [
+[
+"مدام بیشتر شده",
+"has been mounting"
+],
+[
+"استرس کار",
+"work stress"
+],
+[
+"این چند هفته‌ی اخیر",
+"the past few weeks"
+]
+]
+},
+{
+"w": "compete",
+"fa": "دو نانوایی سر کوچه مدام با هم رقابت می‌کنند که کدام نان ارزان‌تری دارد.",
+"en": "The two bakeries on the corner keep competing over who sells cheaper bread.",
+"alt": [
+"The bakeries at the end of the street are always trying to undercut each other on bread.",
+"Those two corner bakeries are constantly in competition over bread prices."
+],
+"bd": [
+[
+"رقابت می‌کنند",
+"compete"
+],
+[
+"دو نانوایی",
+"the two bakeries"
+],
+[
+"سر کوچه",
+"on the corner"
+],
+[
+"نان ارزان‌تر",
+"cheaper bread"
+]
+]
+},
+{
+"w": "dread",
+"fa": "از فکر برگشتن سر کار بعد از تعطیلات واقعاً وحشت دارم.",
+"en": "I'm really dreading going back to work after the holidays.",
+"alt": [
+"I'm not looking forward to returning to work after the break at all.",
+"The thought of going back to work after the holidays fills me with dread."
+],
+"bd": [
+[
+"وحشت دارم",
+"I'm dreading"
+],
+[
+"برگشتن سر کار",
+"going back to work"
+],
+[
+"بعد از تعطیلات",
+"after the holidays"
+]
+]
+},
+{
+"w": "menace",
+"fa": "آن سگ ولگرد واقعاً برای بچه‌های محله یک تهدید شده است.",
+"en": "That stray dog has become a real menace to the neighborhood kids.",
+"alt": [
+"That stray dog is a genuine danger to the children around here.",
+"The stray dog has turned into a real threat for local kids."
+],
+"bd": [
+[
+"تهدید",
+"menace"
+],
+[
+"سگ ولگرد",
+"stray dog"
+],
+[
+"بچه‌های محله",
+"the neighborhood kids"
+]
+]
+},
+{
+"w": "tendency",
+"fa": "او تمایل دارد همه چیز را تا آخرین لحظه عقب بیندازد.",
+"en": "He has a tendency to leave everything until the last minute.",
+"alt": [
+"He tends to put everything off until the very last moment.",
+"Leaving things until the last minute is a habit of his."
+],
+"bd": [
+[
+"تمایل دارد",
+"has a tendency"
+],
+[
+"همه چیز",
+"everything"
+],
+[
+"تا آخرین لحظه",
+"until the last minute"
+]
+]
+},
+{
+"w": "underestimate",
+"fa": "زمانی را که برای خرید هدیه‌ها لازم بود، دست‌کم گرفتم.",
+"en": "I underestimated how long it would take to buy all the presents.",
+"alt": [
+"I didn't realize how much time the gift shopping would take.",
+"Buying the presents took far longer than I'd expected."
+],
+"bd": [
+[
+"دست‌کم گرفتم",
+"I underestimated"
+],
+[
+"زمانی که لازم بود",
+"how long it would take"
+],
+[
+"خرید هدیه‌ها",
+"buying the presents"
+]
+]
+},
+{
+"w": "victorious",
+"fa": "تیم فوتبال مدرسه بعد از یک بازی سخت پیروز از زمین بیرون آمد.",
+"en": "The school soccer team walked off the field victorious after a tough game.",
+"alt": [
+"After a hard-fought game, the school soccer team won.",
+"The school team emerged victorious from a really tough match."
+],
+"bd": [
+[
+"پیروز",
+"victorious"
+],
+[
+"تیم فوتبال مدرسه",
+"the school soccer team"
+],
+[
+"بازی سخت",
+"a tough game"
+]
+]
+},
+{
+"w": "numerous",
+"fa": "بارها به او گفته‌ام که کفش‌هایش را جلوی در نگذارد.",
+"en": "I've told him on numerous occasions not to leave his shoes by the door.",
+"alt": [
+"I've lost count of how many times I've asked him not to leave his shoes by the door.",
+"Countless times I've told him to stop leaving his shoes at the door."
+],
+"bd": [
+[
+"بارها",
+"on numerous occasions"
+],
+[
+"به او گفته‌ام",
+"I've told him"
+],
+[
+"جلوی در",
+"by the door"
+]
+]
+},
+{
+"w": "flexible",
+"fa": "خوشبختانه ساعت کاری‌ام انعطاف‌پذیر است و می‌توانم بچه را از مهدکودک بردارم.",
+"en": "Luckily, my working hours are flexible, so I can pick up our child from daycare.",
+"alt": [
+"Thankfully, I have flexible hours, which means I can collect our child from daycare.",
+"My job has flexible hours, so daycare pickup isn't a problem."
+],
+"bd": [
+[
+"انعطاف‌پذیر",
+"flexible"
+],
+[
+"ساعت کاری‌ام",
+"my working hours"
+],
+[
+"مهدکودک",
+"daycare"
+],
+[
+"خوشبختانه",
+"luckily"
+]
+]
+},
+{
+"w": "evidence",
+"fa": "هیچ مدرکی وجود ندارد که گربه گلدان را شکسته، ولی همه به او شک دارند!",
+"en": "There's no evidence that the cat broke the vase, but everyone suspects it!",
+"alt": [
+"Nobody can prove the cat knocked over the vase, though we all suspect it did!",
+"We have no proof the cat broke the vase, but it's the prime suspect!"
+],
+"bd": [
+[
+"مدرک",
+"evidence"
+],
+[
+"وجود ندارد",
+"there's no"
+],
+[
+"گلدان را شکسته",
+"broke the vase"
+],
+[
+"همه به او شک دارند",
+"everyone suspects it"
+]
+]
+},
+{
+"w": "solitary",
+"fa": "بعضی وقت‌ها یک پیاده‌روی تنهایی در پارک تنها چیزی است که لازم دارم.",
+"en": "Sometimes a solitary walk in the park is all I need.",
+"alt": [
+"Every now and then, all I need is a walk in the park on my own.",
+"Sometimes the only thing I want is a quiet walk alone in the park."
+],
+"bd": [
+[
+"تنهایی",
+"solitary"
+],
+[
+"پیاده‌روی",
+"walk"
+],
+[
+"تنها چیزی است که لازم دارم",
+"is all I need"
+]
+]
+},
+{
+"w": "vision",
+"fa": "با عینک جدید، بینایی‌ام خیلی بهتر شده و دیگر سردرد ندارم.",
+"en": "Since I got new glasses, my vision has improved a lot and I don't get headaches anymore.",
+"alt": [
+"My new glasses have made my eyesight much clearer, and the headaches have stopped.",
+"With my new glasses, I can see far better and no longer get headaches."
+],
+"bd": [
+[
+"بینایی",
+"vision"
+],
+[
+"عینک جدید",
+"new glasses"
+],
+[
+"خیلی بهتر شده",
+"has improved a lot"
+],
+[
+"دیگر سردرد ندارم",
+"I don't get headaches anymore"
+]
+]
+},
+{
+"w": "frequent",
+"fa": "او مشتری همیشگی این کافه است؛ صاحبش حتی سفارشش را از حفظ است.",
+"en": "He's a frequent customer at this café; the owner even knows his order by heart.",
+"alt": [
+"He comes to this café so often that the owner knows exactly what he'll order.",
+"As a regular here, he never even has to tell them his order."
+],
+"bd": [
+[
+"همیشگی",
+"frequent"
+],
+[
+"مشتری",
+"customer"
+],
+[
+"سفارشش را از حفظ است",
+"knows his order by heart"
+]
+]
+},
+{
+"w": "glimpse",
+"fa": "فقط یک لحظه از پنجره‌ی قطار، کوه‌های برفی را دیدم.",
+"en": "I only caught a glimpse of the snowy mountains from the train window.",
+"alt": [
+"I just got a quick look at the snow-capped mountains through the train window.",
+"From the train window, I glimpsed the snowy mountains for a moment."
+],
+"bd": [
+[
+"یک لحظه دیدم",
+"caught a glimpse"
+],
+[
+"پنجره‌ی قطار",
+"the train window"
+],
+[
+"کوه‌های برفی",
+"the snowy mountains"
+]
+]
+},
+{
+"w": "recent",
+"fa": "در ماه‌های اخیر، قیمت‌ها در سوپرمارکت به‌شدت بالا رفته است.",
+"en": "In recent months, prices at the supermarket have gone up dramatically.",
+"alt": [
+"Supermarket prices have shot up over the last few months.",
+"Lately, grocery prices have risen sharply."
+],
+"bd": [
+[
+"اخیر",
+"recent"
+],
+[
+"ماه‌ها",
+"months"
+],
+[
+"قیمت‌ها",
+"prices"
+],
+[
+"به‌شدت بالا رفته است",
+"have gone up dramatically"
+]
+]
+},
+{
+"w": "decade",
+"fa": "ما بیش از یک دهه است که همدیگر را می‌شناسیم.",
+"en": "We've known each other for more than a decade.",
+"alt": [
+"We've been friends for over ten years now.",
+"It's been more than a decade since we first met."
+],
+"bd": [
+[
+"دهه",
+"decade"
+],
+[
+"همدیگر را می‌شناسیم",
+"we've known each other"
+],
+[
+"بیش از",
+"more than"
+]
+]
+},
+{
+"w": "hesitate",
+"fa": "اگر کمکی لازم داشتی، اصلاً تردید نکن و زنگ بزن.",
+"en": "If you need any help, don't hesitate to call me.",
+"alt": [
+"Just give me a call if you need a hand, okay?",
+"Feel free to call whenever you need help."
+],
+"bd": [
+[
+"تردید نکن",
+"don't hesitate"
+],
+[
+"اگر کمکی لازم داشتی",
+"if you need any help"
+],
+[
+"زنگ بزن",
+"call me"
+]
+]
+},
+{
+"w": "absurd",
+"fa": "قیمت قهوه اینجا واقعاً مسخره است؛ پنج یورو برای یک اسپرسو؟",
+"en": "The coffee prices here are absurd; five euros for an espresso?",
+"alt": [
+"It's ridiculous what they charge for coffee here. Five euros for an espresso?",
+"Five euros for one espresso is just absurd!"
+],
+"bd": [
+[
+"مسخره",
+"absurd"
+],
+[
+"قیمت قهوه",
+"the coffee prices"
+],
+[
+"پنج یورو",
+"five euros"
+]
+]
+},
+{
+"w": "conflict",
+"fa": "جلسه‌ی کاری‌ام با جشن تولد دخترم تداخل دارد.",
+"en": "My work meeting conflicts with my daughter's birthday party.",
+"alt": [
+"My work meeting clashes with my daughter's birthday party.",
+"There's a scheduling conflict between my meeting and my daughter's birthday."
+],
+"bd": [
+[
+"تداخل دارد",
+"conflicts with"
+],
+[
+"جلسه‌ی کاری‌ام",
+"my work meeting"
+],
+[
+"جشن تولد دخترم",
+"my daughter's birthday party"
+]
+]
+},
+{
+"w": "minority",
+"fa": "فقط اقلیتی از همکارانم هنوز هر روز به دفتر می‌آیند.",
+"en": "Only a minority of my colleagues still come into the office every day.",
+"alt": [
+"Just a handful of my coworkers still go to the office daily.",
+"Most of my colleagues work remotely now; only a few come in every day."
+],
+"bd": [
+[
+"اقلیتی",
+"a minority"
+],
+[
+"همکارانم",
+"my colleagues"
+],
+[
+"هر روز به دفتر می‌آیند",
+"come into the office every day"
+]
+]
+},
+{
+"w": "fiction",
+"fa": "من بیشتر رمان و داستان می‌خوانم، ولی همسرم کتاب‌های علمی را ترجیح می‌دهد.",
+"en": "I mostly read fiction, but my husband prefers science books.",
+"alt": [
+"I'm more into novels and stories, whereas my husband likes science books.",
+"Fiction is my thing, but my husband would rather read about science."
+],
+"bd": [
+[
+"رمان و داستان",
+"fiction"
+],
+[
+"بیشتر",
+"mostly"
+],
+[
+"همسرم",
+"my husband"
+],
+[
+"ترجیح می‌دهد",
+"prefers"
+]
+]
+},
+{
+"w": "ignite",
+"fa": "بخاری گازی روشن نمی‌شود؛ فکر کنم شمعکش خراب است.",
+"en": "The gas heater won't ignite; I think the pilot light is broken.",
+"alt": [
+"The gas heater isn't lighting. Maybe the pilot light has gone out.",
+"I can't get the gas heater to ignite; the pilot light must be faulty."
+],
+"bd": [
+[
+"روشن نمی‌شود",
+"won't ignite"
+],
+[
+"بخاری گازی",
+"the gas heater"
+],
+[
+"شمعک",
+"pilot light"
+],
+[
+"خراب است",
+"is broken"
+]
+]
+},
+{
+"w": "abolish",
+"fa": "کاش مدرسه تکلیف شب را برای بچه‌های کوچک کلاً لغو می‌کرد.",
+"en": "I wish the school would abolish homework for young children altogether.",
+"alt": [
+"I really wish they'd get rid of homework for little kids completely.",
+"If only the school would scrap homework for the younger children."
+],
+"bd": [
+[
+"لغو می‌کرد",
+"would abolish"
+],
+[
+"کاش",
+"I wish"
+],
+[
+"تکلیف شب",
+"homework"
+],
+[
+"بچه‌های کوچک",
+"young children"
+]
+]
+},
+{
+"w": "urban",
+"fa": "زندگی شهری راحت است، ولی گاهی دلم یک جای ساکت می‌خواهد.",
+"en": "Urban life is convenient, but sometimes I long for somewhere quiet.",
+"alt": [
+"City living is handy, but now and then I crave a bit of peace and quiet.",
+"Life in the city is convenient, though sometimes I just want somewhere calm."
+],
+"bd": [
+[
+"شهری",
+"urban"
+],
+[
+"زندگی",
+"life"
+],
+[
+"راحت است",
+"is convenient"
+],
+[
+"دلم یک جای ساکت می‌خواهد",
+"I long for somewhere quiet"
+]
+]
+},
+{
+"w": "population",
+"fa": "جمعیت این شهر در تابستان به خاطر گردشگرها دو برابر می‌شود.",
+"en": "The population of this town doubles in summer because of the tourists.",
+"alt": [
+"Thanks to tourists, this town's population doubles every summer.",
+"In summer, the number of people in town doubles with all the tourists."
+],
+"bd": [
+[
+"جمعیت",
+"population"
+],
+[
+"این شهر",
+"this town"
+],
+[
+"دو برابر می‌شود",
+"doubles"
+],
+[
+"گردشگرها",
+"the tourists"
+]
+]
+},
+{
+"w": "frank",
+"fa": "بگذار رک باشم؛ این مدل مو اصلاً به تو نمی‌آید.",
+"en": "Let me be frank; this haircut really doesn't suit you.",
+"alt": [
+"I'll be honest with you: that hairstyle doesn't suit you at all.",
+"To be frank, this haircut just isn't you."
+],
+"bd": [
+[
+"رک",
+"frank"
+],
+[
+"بگذار",
+"let me"
+],
+[
+"این مدل مو",
+"this haircut"
+],
+[
+"به تو نمی‌آید",
+"doesn't suit you"
+]
+]
+},
+{
+"w": "pollute",
+"fa": "ماشین‌هایی که با موتور روشن جلوی مدرسه می‌ایستند، هوا را آلوده می‌کنند.",
+"en": "All those cars idling outside the school are polluting the air.",
+"alt": [
+"The cars that sit with their engines running outside the school are polluting the air.",
+"Engines left running in front of the school are making the air dirty."
+],
+"bd": [
+[
+"آلوده می‌کنند",
+"are polluting"
+],
+[
+"با موتور روشن می‌ایستند",
+"idling"
+],
+[
+"جلوی مدرسه",
+"outside the school"
+],
+[
+"هوا",
+"the air"
+]
+]
+},
+{
+"w": "reveal",
+"fa": "او بالاخره راز دستور پخت کیک معروفش را فاش کرد.",
+"en": "She finally revealed the secret to her famous cake recipe.",
+"alt": [
+"At last, she let us in on the secret of her famous cake.",
+"She finally shared the secret behind her famous cake recipe."
+],
+"bd": [
+[
+"فاش کرد",
+"revealed"
+],
+[
+"بالاخره",
+"finally"
+],
+[
+"راز دستور پخت",
+"the secret to the recipe"
+],
+[
+"کیک معروفش",
+"her famous cake"
+]
+]
+},
+{
+"w": "prohibit",
+"fa": "سیگار کشیدن در تمام ساختمان، حتی بالکن‌ها، ممنوع است.",
+"en": "Smoking is prohibited throughout the building, even on the balconies.",
+"alt": [
+"You're not allowed to smoke anywhere in the building, balconies included.",
+"The building has a strict no-smoking rule, even on the balconies."
+],
+"bd": [
+[
+"ممنوع است",
+"is prohibited"
+],
+[
+"سیگار کشیدن",
+"smoking"
+],
+[
+"در تمام ساختمان",
+"throughout the building"
+],
+[
+"حتی بالکن‌ها",
+"even on the balconies"
+]
+]
+},
+{
+"w": "urgent",
+"fa": "ببخشید که مزاحم می‌شوم، ولی یک موضوع فوری پیش آمده.",
+"en": "Sorry to bother you, but something urgent has come up.",
+"alt": [
+"I'm sorry to interrupt, but there's something urgent I need to deal with.",
+"Apologies for disturbing you, but something pressing has come up."
+],
+"bd": [
+[
+"فوری",
+"urgent"
+],
+[
+"ببخشید که مزاحم می‌شوم",
+"sorry to bother you"
+],
+[
+"پیش آمده",
+"has come up"
+]
+]
+},
+{
+"w": "adequate",
+"fa": "آشپزخانه کوچک است، ولی برای یک خانواده‌ی سه‌نفره کافی است.",
+"en": "The kitchen is small, but it's adequate for a family of three.",
+"alt": [
+"The kitchen isn't big, but it's enough for the three of us.",
+"It's a small kitchen, though it does the job for a family of three."
+],
+"bd": [
+[
+"کافی است",
+"is adequate"
+],
+[
+"آشپزخانه",
+"the kitchen"
+],
+[
+"خانواده‌ی سه‌نفره",
+"a family of three"
+]
+]
+},
+{
+"w": "decrease",
+"fa": "از وقتی با دوچرخه سر کار می‌روم، هزینه‌های رفت‌وآمدم خیلی کم شده است.",
+"en": "Since I started biking to work, my commuting costs have decreased a lot.",
+"alt": [
+"My travel expenses have dropped significantly since I began cycling to work.",
+"Biking to work has cut my commuting costs considerably."
+],
+"bd": [
+[
+"کم شده است",
+"have decreased"
+],
+[
+"هزینه‌های رفت‌وآمد",
+"commuting costs"
+],
+[
+"با دوچرخه سر کار می‌روم",
+"biking to work"
+]
+]
+},
+{
+"w": "audible",
+"fa": "صدایت به‌زور شنیده می‌شود؛ می‌شود میکروفونت را نزدیک‌تر بیاوری؟",
+"en": "You're barely audible; could you bring your microphone closer?",
+"alt": [
+"I can hardly hear you. Can you move the mic closer?",
+"Your voice is very faint. Could you get closer to the microphone?"
+],
+"bd": [
+[
+"به‌زور شنیده می‌شود",
+"barely audible"
+],
+[
+"میکروفونت",
+"your microphone"
+],
+[
+"نزدیک‌تر بیاوری",
+"bring closer"
+]
+]
+},
+{
+"w": "journalist",
+"fa": "دخترخاله‌ام روزنامه‌نگار است و همیشه داستان‌های جالبی از مصاحبه‌هایش تعریف می‌کند.",
+"en": "My cousin is a journalist, and she always has interesting stories from her interviews.",
+"alt": [
+"My cousin works as a journalist and tells the best stories about the people she interviews.",
+"Being a journalist, my cousin always comes back with fascinating interview stories."
+],
+"bd": [
+[
+"روزنامه‌نگار",
+"journalist"
+],
+[
+"دخترخاله‌ام",
+"my cousin"
+],
+[
+"داستان‌های جالب",
+"interesting stories"
+],
+[
+"مصاحبه‌هایش",
+"her interviews"
+]
+]
+},
+{
+"w": "revive",
+"fa": "یک فنجان چای داغ بعد از آن پیاده‌روی سرد حسابی سرحالم آورد.",
+"en": "A hot cup of tea really revived me after that cold walk.",
+"alt": [
+"That hot tea brought me back to life after the freezing walk.",
+"After the chilly walk, a cup of hot tea perked me right up."
+],
+"bd": [
+[
+"سرحالم آورد",
+"revived me"
+],
+[
+"یک فنجان چای داغ",
+"a hot cup of tea"
+],
+[
+"پیاده‌روی سرد",
+"the cold walk"
+]
+]
+},
+{
+"w": "commence",
+"fa": "مراسم ساعت هفت شروع می‌شود، پس لطفاً به موقع بیایید.",
+"en": "The ceremony will commence at seven, so please arrive on time.",
+"alt": [
+"The ceremony starts at seven o'clock sharp, so please be punctual.",
+"Things kick off at seven, so please don't be late."
+],
+"bd": [
+[
+"شروع می‌شود",
+"will commence"
+],
+[
+"مراسم",
+"the ceremony"
+],
+[
+"به موقع بیایید",
+"arrive on time"
+]
+]
+},
+{
+"w": "observant",
+"fa": "چقدر تیزبینی! حتی متوجه شدی که مدل مویم را عوض کرده‌ام.",
+"en": "You're so observant! You even noticed I'd changed my hairstyle.",
+"alt": [
+"Nothing gets past you! You spotted my new haircut right away.",
+"How observant of you to notice my new hairstyle!"
+],
+"bd": [
+[
+"تیزبین",
+"observant"
+],
+[
+"حتی متوجه شدی",
+"you even noticed"
+],
+[
+"مدل مویم را عوض کرده‌ام",
+"I'd changed my hairstyle"
+]
+]
+},
+{
+"w": "identify",
+"fa": "می‌توانی این گیاه را شناسایی کنی؟ نمی‌دانم هر چند وقت یک بار باید آبش بدهم.",
+"en": "Can you identify this plant? I don't know how often I should water it.",
+"alt": [
+"Do you know what kind of plant this is? I'm not sure how much water it needs.",
+"Could you tell me what this plant is? I have no idea how often to water it."
+],
+"bd": [
+[
+"شناسایی کنی",
+"identify"
+],
+[
+"این گیاه",
+"this plant"
+],
+[
+"هر چند وقت یک بار باید آبش بدهم",
+"how often I should water it"
+]
+]
+},
+{
+"w": "migrate",
+"fa": "هر پاییز، پرنده‌ها از بالای خانه‌مان به سمت جنوب مهاجرت می‌کنند.",
+"en": "Every fall, the birds migrate south over our house.",
+"alt": [
+"Each fall we watch the birds fly south over our home.",
+"In autumn, flocks of birds migrate southward right above our house."
+],
+"bd": [
+[
+"مهاجرت می‌کنند",
+"migrate"
+],
+[
+"هر پاییز",
+"every fall"
+],
+[
+"پرنده‌ها",
+"the birds"
+],
+[
+"به سمت جنوب",
+"south"
+]
+]
+},
+{
+"w": "persist",
+"fa": "اگر سرفه‌ات تا آخر هفته ادامه پیدا کرد، حتماً پیش دکتر برو.",
+"en": "If your cough persists until the end of the week, you should definitely see a doctor.",
+"alt": [
+"If the cough hasn't gone by the weekend, make sure you see a doctor.",
+"Go to the doctor if that cough is still there at the end of the week."
+],
+"bd": [
+[
+"ادامه پیدا کرد",
+"persists"
+],
+[
+"سرفه‌ات",
+"your cough"
+],
+[
+"تا آخر هفته",
+"until the end of the week"
+],
+[
+"پیش دکتر برو",
+"see a doctor"
+]
+]
+},
+{
+"w": "hazy",
+"fa": "خاطره‌ام از آن سفر کمی مبهم است؛ خیلی کوچک بودم.",
+"en": "My memory of that trip is a bit hazy; I was very young.",
+"alt": [
+"I only vaguely remember that trip because I was so little.",
+"That trip is a bit of a blur for me; I was really young."
+],
+"bd": [
+[
+"مبهم",
+"hazy"
+],
+[
+"خاطره‌ام",
+"my memory"
+],
+[
+"آن سفر",
+"that trip"
+],
+[
+"خیلی کوچک بودم",
+"I was very young"
+]
+]
+},
+{
+"w": "gleam",
+"fa": "بعد از تمیزکاری، کف آشپزخانه برق می‌زد.",
+"en": "After the cleaning, the kitchen floor was gleaming.",
+"alt": [
+"Once we'd finished cleaning, the kitchen floor was sparkling.",
+"The kitchen floor gleamed after all that scrubbing."
+],
+"bd": [
+[
+"برق می‌زد",
+"was gleaming"
+],
+[
+"بعد از تمیزکاری",
+"after the cleaning"
+],
+[
+"کف آشپزخانه",
+"the kitchen floor"
+]
+]
+},
+{
+"w": "editor",
+"fa": "سردبیر مجله از من خواست مقاله‌ام را تا جمعه کوتاه‌تر کنم.",
+"en": "The magazine editor asked me to shorten my article by Friday.",
+"alt": [
+"The editor at the magazine wants my article cut down by Friday.",
+"I've been asked by the magazine's editor to trim my article before Friday."
+],
+"bd": [
+[
+"سردبیر",
+"editor"
+],
+[
+"مجله",
+"magazine"
+],
+[
+"کوتاه‌تر کنم",
+"shorten"
+],
+[
+"تا جمعه",
+"by Friday"
+]
+]
+},
+{
+"w": "unruly",
+"fa": "بچه‌های همسایه امروز حسابی شلوغ و سرکش بودند؛ مادرشان کلافه شده بود.",
+"en": "The neighbors' kids were really unruly today; their mom was at her wits' end.",
+"alt": [
+"The kids next door were completely out of control today, and their mother was exhausted.",
+"Our neighbors' children ran wild today, driving their mom up the wall."
+],
+"bd": [
+[
+"شلوغ و سرکش",
+"unruly"
+],
+[
+"بچه‌های همسایه",
+"the neighbors' kids"
+],
+[
+"کلافه شده بود",
+"was at her wits' end"
+]
+]
+},
+{
+"w": "rival",
+"fa": "این دو برادر از بچگی در همه چیز رقیب هم بوده‌اند.",
+"en": "These two brothers have been rivals in everything since childhood.",
+"alt": [
+"Ever since they were kids, the two brothers have competed at everything.",
+"The brothers have always been rivals, right from childhood."
+],
+"bd": [
+[
+"رقیب",
+"rivals"
+],
+[
+"این دو برادر",
+"these two brothers"
+],
+[
+"در همه چیز",
+"in everything"
+],
+[
+"از بچگی",
+"since childhood"
+]
+]
+},
+{
+"w": "violent",
+"fa": "من فیلم‌های خیلی خشن را دوست ندارم؛ بیا یک کمدی ببینیم.",
+"en": "I don't like really violent movies; let's watch a comedy.",
+"alt": [
+"Very violent movies aren't my thing. How about a comedy instead?",
+"I'd rather not watch anything too violent. Let's go for a comedy."
+],
+"bd": [
+[
+"خشن",
+"violent"
+],
+[
+"فیلم‌ها",
+"movies"
+],
+[
+"بیا یک کمدی ببینیم",
+"let's watch a comedy"
+]
+]
+},
+{
+"w": "brutal",
+"fa": "صادق باشم، این زمستان واقعاً بی‌رحم و طاقت‌فرسا بود.",
+"en": "To be honest, this winter has been absolutely brutal.",
+"alt": [
+"Honestly, this winter has been really rough.",
+"I'll be honest: this winter has been a killer."
+],
+"bd": [
+[
+"بی‌رحم و طاقت‌فرسا",
+"brutal"
+],
+[
+"صادق باشم",
+"to be honest"
+],
+[
+"این زمستان",
+"this winter"
+]
+]
+},
+{
+"w": "opponent",
+"fa": "حریفم در شطرنج یک پسر ده‌ساله بود و من را شکست داد!",
+"en": "My chess opponent was a ten-year-old boy, and he beat me!",
+"alt": [
+"I played chess against a ten-year-old, and he won!",
+"Believe it or not, I lost a chess game to a ten-year-old opponent."
+],
+"bd": [
+[
+"حریفم",
+"my opponent"
+],
+[
+"شطرنج",
+"chess"
+],
+[
+"پسر ده‌ساله",
+"a ten-year-old boy"
+],
+[
+"شکست داد",
+"beat me"
+]
+]
+},
+{
+"w": "brawl",
+"fa": "دیشب بیرون بار یک دعوای حسابی راه افتاد و پلیس آمد.",
+"en": "Last night a brawl broke out outside the bar, and the police showed up.",
+"alt": [
+"There was a big fight outside the bar last night, and the police turned up.",
+"A brawl started outside the bar last night, so the police were called."
+],
+"bd": [
+[
+"دعوای حسابی",
+"a brawl"
+],
+[
+"دیشب",
+"last night"
+],
+[
+"بیرون بار",
+"outside the bar"
+],
+[
+"پلیس آمد",
+"the police showed up"
+]
+]
+},
+{
+"w": "duplicate",
+"fa": "می‌شود یک نسخه‌ی اضافه از این کلید خانه بسازید؟",
+"en": "Could you make a duplicate of this house key?",
+"alt": [
+"Can I get a copy of this house key made, please?",
+"I'd like a spare made of this house key, please."
+],
+"bd": [
+[
+"نسخه‌ی اضافه",
+"a duplicate"
+],
+[
+"کلید خانه",
+"house key"
+],
+[
+"بسازید",
+"make"
+]
+]
+},
+{
+"w": "vicious",
+"fa": "یک شایعه‌ی بدجنسانه درباره‌ی معلم جدید در گروه والدین پخش شده.",
+"en": "A vicious rumor about the new teacher has been going around the parents' group.",
+"alt": [
+"Someone's spreading a nasty rumor about the new teacher in the parents' chat.",
+"There's a cruel rumor about the new teacher going around among the parents."
+],
+"bd": [
+[
+"بدجنسانه",
+"vicious"
+],
+[
+"شایعه",
+"rumor"
+],
+[
+"معلم جدید",
+"the new teacher"
+],
+[
+"گروه والدین",
+"the parents' group"
+]
+]
+},
+{
+"w": "underdog",
+"fa": "همه فکر می‌کردند تیم کوچک می‌بازد، ولی من همیشه طرفدار تیم ضعیف‌تر هستم.",
+"en": "Everyone thought the small team would lose, but I always root for the underdog.",
+"alt": [
+"Nobody gave the little team a chance, but I always support the underdog.",
+"I always cheer for the underdog, even when everyone expects them to lose."
+],
+"bd": [
+[
+"تیم ضعیف‌تر",
+"the underdog"
+],
+[
+"همه فکر می‌کردند",
+"everyone thought"
+],
+[
+"طرفدار...هستم",
+"I root for"
+]
+]
+},
+{
+"w": "bewildered",
+"fa": "در ایستگاه قطار با آن همه تابلو، کاملاً گیج و سردرگم شده بودم.",
+"en": "With all those signs at the train station, I was completely bewildered.",
+"alt": [
+"All the signs at the station left me totally confused.",
+"I was utterly lost among all the signs at the train station."
+],
+"bd": [
+[
+"گیج و سردرگم",
+"bewildered"
+],
+[
+"ایستگاه قطار",
+"the train station"
+],
+[
+"آن همه تابلو",
+"all those signs"
+]
+]
+},
+{
+"w": "expand",
+"fa": "رستوران محبوب محله‌مان دارد فضایش را بزرگ‌تر می‌کند.",
+"en": "Our favorite local restaurant is expanding.",
+"alt": [
+"The restaurant we love in our neighborhood is getting bigger.",
+"Our go-to neighborhood restaurant is adding more space."
+],
+"bd": [
+[
+"بزرگ‌تر می‌کند",
+"is expanding"
+],
+[
+"رستوران محبوب",
+"favorite restaurant"
+],
+[
+"محله‌مان",
+"our local"
+],
+[
+"فضایش",
+"its space"
+]
+]
+},
+{
+"w": "alter",
+"fa": "این شلوار کمی بلند است؛ باید بدهم خیاط کوتاهش کند.",
+"en": "These pants are a bit long; I need to get them altered.",
+"alt": [
+"These pants are slightly too long, so I'll have them hemmed.",
+"I need a tailor to shorten these pants."
+],
+"bd": [
+[
+"خیاط کوتاهش کند",
+"get them altered"
+],
+[
+"این شلوار",
+"these pants"
+],
+[
+"کمی بلند است",
+"are a bit long"
+]
+]
+},
+{
+"w": "mature",
+"fa": "برای سنش خیلی پخته و عاقل است.",
+"en": "He's very mature for his age.",
+"alt": [
+"He acts really grown-up for someone his age.",
+"For his age, he's remarkably mature."
+],
+"bd": [
+[
+"پخته و عاقل",
+"mature"
+],
+[
+"برای سنش",
+"for his age"
+],
+[
+"خیلی",
+"very"
+]
+]
+},
+{
+"w": "sacred",
+"fa": "یکشنبه‌ها برای ما مقدس است؛ هیچ کاری نمی‌کنیم، فقط با خانواده‌ایم.",
+"en": "Sundays are sacred to us: no work, just family.",
+"alt": [
+"We keep Sundays sacred, with no work and only family time.",
+"Sunday is untouchable in our house: family only, no work."
+],
+"bd": [
+[
+"مقدس",
+"sacred"
+],
+[
+"یکشنبه‌ها",
+"Sundays"
+],
+[
+"هیچ کاری نمی‌کنیم",
+"no work"
+],
+[
+"فقط با خانواده‌ایم",
+"just family"
+]
+]
+},
+{
+"w": "revise",
+"fa": "باید برنامه‌ی سفرمان را بازبینی کنیم؛ پرواز برگشت عوض شده.",
+"en": "We need to revise our travel plans; the return flight has changed.",
+"alt": [
+"Our return flight was changed, so we'll have to rework our travel plans.",
+"Let's revise the itinerary, since the flight home has been moved."
+],
+"bd": [
+[
+"بازبینی کنیم",
+"revise"
+],
+[
+"برنامه‌ی سفرمان",
+"our travel plans"
+],
+[
+"پرواز برگشت",
+"the return flight"
+],
+[
+"عوض شده",
+"has changed"
+]
+]
+},
+{
+"w": "pledge",
+"fa": "او تعهد داد که از این به بعد هر شب ظرف‌ها را بشوید.",
+"en": "He pledged to do the dishes every night from now on.",
+"alt": [
+"He promised he'd wash the dishes every night from now on.",
+"From now on, he's vowed to do the dishes every evening."
+],
+"bd": [
+[
+"تعهد داد",
+"pledged"
+],
+[
+"از این به بعد",
+"from now on"
+],
+[
+"ظرف‌ها را بشوید",
+"do the dishes"
+],
+[
+"هر شب",
+"every night"
+]
+]
+},
+{
+"w": "casual",
+"fa": "مهمانی خودمانی است، پس لازم نیست لباس رسمی بپوشی.",
+"en": "It's a casual party, so you don't need to dress up.",
+"alt": [
+"It's just an informal get-together, so no need to dress up.",
+"The party's relaxed, so wear whatever you're comfortable in."
+],
+"bd": [
+[
+"خودمانی",
+"casual"
+],
+[
+"مهمانی",
+"party"
+],
+[
+"لازم نیست لباس رسمی بپوشی",
+"you don't need to dress up"
+]
+]
+},
+{
+"w": "pursue",
+"fa": "بعد از بازنشستگی، بالاخره می‌خواهد علاقه‌اش به سفالگری را دنبال کند.",
+"en": "After retiring, she finally wants to pursue her interest in pottery.",
+"alt": [
+"Now that she's retired, she wants to take up pottery seriously.",
+"Once she retires, she plans to finally follow her passion for pottery."
+],
+"bd": [
+[
+"دنبال کند",
+"pursue"
+],
+[
+"بعد از بازنشستگی",
+"after retiring"
+],
+[
+"علاقه‌اش به سفالگری",
+"her interest in pottery"
+]
+]
+},
+{
+"w": "unanimous",
+"fa": "تصمیم برای سفارش پیتزا کاملاً به اتفاق آرا بود!",
+"en": "The decision to order pizza was unanimous!",
+"alt": [
+"Everyone agreed: pizza it is!",
+"We all voted for pizza, no exceptions!"
+],
+"bd": [
+[
+"به اتفاق آرا",
+"unanimous"
+],
+[
+"تصمیم",
+"the decision"
+],
+[
+"سفارش پیتزا",
+"to order pizza"
+]
+]
+},
+{
+"w": "fortunate",
+"fa": "خیلی خوش‌شانسیم که همسایه‌های به این مهربانی داریم.",
+"en": "We're very fortunate to have such kind neighbors.",
+"alt": [
+"We're lucky to have neighbors as lovely as ours.",
+"Having such kind neighbors is a real blessing."
+],
+"bd": [
+[
+"خوش‌شانسیم",
+"we're fortunate"
+],
+[
+"همسایه‌ها",
+"neighbors"
+],
+[
+"به این مهربانی",
+"such kind"
+]
+]
+},
+{
+"w": "pioneer",
+"fa": "مادربزرگش جزو اولین زن‌هایی بود که در شهرشان رانندگی کرد؛ یک پیشگام واقعی.",
+"en": "Her grandmother was one of the first women to drive in their town; a real pioneer.",
+"alt": [
+"Her grandma was a true pioneer, among the first women in town to get behind the wheel.",
+"As one of the first female drivers in her town, her grandmother was a genuine pioneer."
+],
+"bd": [
+[
+"پیشگام",
+"pioneer"
+],
+[
+"مادربزرگش",
+"her grandmother"
+],
+[
+"جزو اولین زن‌ها",
+"one of the first women"
+],
+[
+"رانندگی کرد",
+"to drive"
+]
+]
+},
+{
+"w": "innovative",
+"fa": "این اپلیکیشن ایده‌ی نوآورانه‌ای برای تقسیم کارهای خانه دارد.",
+"en": "This app has an innovative idea for sharing household chores.",
+"alt": [
+"The app takes a fresh, creative approach to splitting housework.",
+"There's a clever new idea in this app for dividing up chores."
+],
+"bd": [
+[
+"نوآورانه",
+"innovative"
+],
+[
+"این اپلیکیشن",
+"this app"
+],
+[
+"تقسیم کارهای خانه",
+"sharing household chores"
+]
+]
+},
+{
+"w": "slender",
+"fa": "یک گلدان بلند و باریک برای این گوشه‌ی اتاق می‌خواهم.",
+"en": "I'd like a tall, slender vase for this corner of the room.",
+"alt": [
+"I'm looking for a tall, narrow vase for this corner.",
+"A tall, slim vase would look perfect in this corner."
+],
+"bd": [
+[
+"باریک",
+"slender"
+],
+[
+"بلند",
+"tall"
+],
+[
+"گلدان",
+"vase"
+],
+[
+"این گوشه‌ی اتاق",
+"this corner of the room"
+]
+]
+},
+{
+"w": "surpass",
+"fa": "فروش شیرینی‌هایش امسال حتی از انتظارات خودش هم فراتر رفت.",
+"en": "Sales of her pastries this year surpassed even her own expectations.",
+"alt": [
+"Her pastry sales this year went beyond what even she had expected.",
+"She sold more pastries this year than she ever thought she would."
+],
+"bd": [
+[
+"فراتر رفت",
+"surpassed"
+],
+[
+"فروش شیرینی‌هایش",
+"sales of her pastries"
+],
+[
+"انتظارات خودش",
+"her own expectations"
+]
+]
+},
+{
+"w": "vast",
+"fa": "از بالای تپه، منظره‌ی وسیعی از کل شهر پیداست.",
+"en": "From the top of the hill, you get a vast view of the whole city.",
+"alt": [
+"The hilltop gives you a sweeping view over the entire city.",
+"You can see the whole city stretched out below from the top of the hill."
+],
+"bd": [
+[
+"وسیع",
+"vast"
+],
+[
+"بالای تپه",
+"the top of the hill"
+],
+[
+"منظره",
+"view"
+],
+[
+"کل شهر",
+"the whole city"
+]
+]
+},
+{
+"w": "doubt",
+"fa": "شک دارم که این بسته قبل از نوروز برسد.",
+"en": "I doubt this package will arrive before Nowruz.",
+"alt": [
+"I don't think this package is going to make it before Nowruz.",
+"It's unlikely this package will get here before Nowruz."
+],
+"bd": [
+[
+"شک دارم",
+"I doubt"
+],
+[
+"این بسته",
+"this package"
+],
+[
+"قبل از نوروز برسد",
+"will arrive before Nowruz"
+]
+]
+},
+{
+"w": "capacity",
+"fa": "سالن آنقدر شلوغ بود که فکر کنم بیشتر از ظرفیتش آدم آمده بود.",
+"en": "The hall was so crowded that I think it was over capacity.",
+"alt": [
+"The venue was packed beyond its capacity, I think.",
+"There were more people in the hall than it was designed to hold."
+],
+"bd": [
+[
+"ظرفیت",
+"capacity"
+],
+[
+"سالن",
+"the hall"
+],
+[
+"آنقدر شلوغ",
+"so crowded"
+],
+[
+"بیشتر از",
+"over"
+]
+]
+},
+{
+"w": "penetrate",
+"fa": "باران آنقدر شدید بود که حتی از کاپشن ضدآبم هم نفوذ کرد.",
+"en": "The rain was so heavy that it even penetrated my waterproof jacket.",
+"alt": [
+"It rained so hard that it soaked right through my waterproof jacket.",
+"Even my waterproof jacket couldn't keep out that heavy rain."
+],
+"bd": [
+[
+"نفوذ کرد",
+"penetrated"
+],
+[
+"باران آنقدر شدید بود",
+"the rain was so heavy"
+],
+[
+"کاپشن ضدآبم",
+"my waterproof jacket"
+]
+]
+},
+{
+"w": "accurate",
+"fa": "پیش‌بینی هوا این هفته اصلاً دقیق نبود؛ گفتند آفتابی است و باران آمد.",
+"en": "The weather forecast wasn't accurate at all this week; they said sunny and it rained.",
+"alt": [
+"This week's forecast was way off: they promised sunshine and we got rain.",
+"The forecast got it completely wrong this week, calling for sun when it rained."
+],
+"bd": [
+[
+"دقیق نبود",
+"wasn't accurate"
+],
+[
+"پیش‌بینی هوا",
+"the weather forecast"
+],
+[
+"گفتند آفتابی است",
+"they said sunny"
+],
+[
+"باران آمد",
+"it rained"
+]
+]
+},
+{
+"w": "grateful",
+"fa": "واقعاً ممنونم که آن روز بچه‌ها را از مدرسه برداشتی.",
+"en": "I'm really grateful that you picked the kids up from school that day.",
+"alt": [
+"Thank you so much for collecting the kids from school that day.",
+"I really appreciate you picking the children up from school that day."
+],
+"bd": [
+[
+"ممنونم",
+"I'm grateful"
+],
+[
+"واقعاً",
+"really"
+],
+[
+"بچه‌ها را از مدرسه برداشتی",
+"you picked the kids up from school"
+]
+]
+},
+{
+"w": "cautious",
+"fa": "در جاده‌های یخ‌زده باید خیلی محتاط رانندگی کنی.",
+"en": "You need to be very cautious when driving on icy roads.",
+"alt": [
+"Be extra careful driving on icy roads.",
+"Icy roads mean you have to drive really carefully."
+],
+"bd": [
+[
+"محتاط",
+"cautious"
+],
+[
+"جاده‌های یخ‌زده",
+"icy roads"
+],
+[
+"رانندگی کنی",
+"driving"
+]
+]
+},
+{
+"w": "confident",
+"fa": "بعد از کلی تمرین، حالا در انگلیسی صحبت کردن با غریبه‌ها خیلی مطمئن‌ترم.",
+"en": "After lots of practice, I'm much more confident speaking English with strangers now.",
+"alt": [
+"All that practice has made me far more confident when I talk to strangers in English.",
+"I feel a lot surer of myself speaking English to strangers after all the practice."
+],
+"bd": [
+[
+"مطمئن‌ترم",
+"I'm more confident"
+],
+[
+"بعد از کلی تمرین",
+"after lots of practice"
+],
+[
+"انگلیسی صحبت کردن",
+"speaking English"
+],
+[
+"با غریبه‌ها",
+"with strangers"
+]
+]
+},
+{
+"w": "appeal",
+"fa": "زندگی در یک خانه‌ی حیاط‌دار برای من خیلی جذابیت دارد.",
+"en": "Living in a house with a yard really appeals to me.",
+"alt": [
+"The idea of a house with a yard is really attractive to me.",
+"I love the thought of living somewhere with a yard."
+],
+"bd": [
+[
+"جذابیت دارد",
+"appeals to me"
+],
+[
+"خانه‌ی حیاط‌دار",
+"a house with a yard"
+],
+[
+"زندگی",
+"living"
+]
+]
+},
+{
+"w": "addict",
+"fa": "من رسماً معتاد قهوه‌ام؛ بدون آن صبح‌ها اصلاً مغزم کار نمی‌کند.",
+"en": "I'm officially a coffee addict; I can't function in the morning without it.",
+"alt": [
+"I'm hooked on coffee. Without it, I'm useless in the mornings.",
+"Honestly, I'm addicted to coffee; mornings are impossible without it."
+],
+"bd": [
+[
+"معتاد",
+"addict"
+],
+[
+"رسماً",
+"officially"
+],
+[
+"قهوه",
+"coffee"
+],
+[
+"صبح‌ها مغزم کار نمی‌کند",
+"I can't function in the morning"
+]
+]
+},
+{
+"w": "wary",
+"fa": "من به ایمیل‌هایی که می‌گویند جایزه برده‌ام خیلی بدبین و محتاطم.",
+"en": "I'm very wary of emails saying I've won a prize.",
+"alt": [
+"I'm always suspicious of emails claiming I've won something.",
+"Emails telling me I've won a prize make me very wary."
+],
+"bd": [
+[
+"بدبین و محتاط",
+"wary"
+],
+[
+"ایمیل‌ها",
+"emails"
+],
+[
+"جایزه برده‌ام",
+"I've won a prize"
+]
+]
+},
+{
+"w": "aware",
+"fa": "خبر داشتی که کتابخانه این هفته زودتر تعطیل می‌شود؟",
+"en": "Were you aware that the library closes early this week?",
+"alt": [
+"Did you know the library's closing early this week?",
+"Had you heard that the library has shorter hours this week?"
+],
+"bd": [
+[
+"خبر داشتی",
+"were you aware"
+],
+[
+"کتابخانه",
+"the library"
+],
+[
+"زودتر تعطیل می‌شود",
+"closes early"
+],
+[
+"این هفته",
+"this week"
+]
+]
+},
+{
+"w": "misfortune",
+"fa": "او با وجود همه‌ی بدبیاری‌هایش، هنوز شوخ‌طبعی‌اش را از دست نداده.",
+"en": "Despite all his misfortune, he still hasn't lost his sense of humor.",
+"alt": [
+"Even after all his bad luck, he's kept his sense of humor.",
+"He's had more than his share of misfortune, yet he's still funny."
+],
+"bd": [
+[
+"بدبیاری‌ها",
+"misfortune"
+],
+[
+"با وجود",
+"despite"
+],
+[
+"شوخ‌طبعی",
+"sense of humor"
+],
+[
+"از دست نداده",
+"hasn't lost"
+]
+]
+},
+{
+"w": "avoid",
+"fa": "بهتر است ساعت هشت صبح از اتوبان نرویم؛ ترافیک وحشتناک است.",
+"en": "We'd better avoid the highway at eight in the morning; the traffic is terrible.",
+"alt": [
+"Let's stay off the highway at 8 a.m. because traffic is awful.",
+"It's best to steer clear of the highway at eight; the traffic's a nightmare."
+],
+"bd": [
+[
+"نرویم",
+"avoid"
+],
+[
+"اتوبان",
+"the highway"
+],
+[
+"ساعت هشت صبح",
+"eight in the morning"
+],
+[
+"ترافیک وحشتناک است",
+"the traffic is terrible"
+]
+]
+},
+{
+"w": "wretched",
+"fa": "با این سرماخوردگی حالم واقعاً افتضاح است.",
+"en": "I feel absolutely wretched with this cold.",
+"alt": [
+"This cold is making me feel awful.",
+"I feel truly miserable with this cold."
+],
+"bd": [
+[
+"افتضاح",
+"wretched"
+],
+[
+"این سرماخوردگی",
+"this cold"
+],
+[
+"حالم",
+"I feel"
+]
+]
+},
+{
+"w": "nourish",
+"fa": "یک کاسه سوپ گرم در این هوای سرد، بدن را حسابی تغذیه و تقویت می‌کند.",
+"en": "A warm bowl of soup really nourishes the body in this cold weather.",
+"alt": [
+"On cold days like this, a hearty soup is what really nourishes you.",
+"Nothing nourishes you better in cold weather than a warm bowl of soup."
+],
+"bd": [
+[
+"تغذیه و تقویت می‌کند",
+"nourishes"
+],
+[
+"یک کاسه سوپ گرم",
+"a warm bowl of soup"
+],
+[
+"این هوای سرد",
+"this cold weather"
+]
+]
+},
+{
+"w": "harsh",
+"fa": "فکر نمی‌کنی کمی با او تند برخورد کردی؟ فقط یک اشتباه کوچک کرد.",
+"en": "Don't you think you were a bit harsh on him? He only made a small mistake.",
+"alt": [
+"Weren't you a little hard on him? It was only a tiny mistake.",
+"You were rather harsh with him, considering it was just a small slip."
+],
+"bd": [
+[
+"تند برخورد کردی",
+"you were harsh"
+],
+[
+"فکر نمی‌کنی",
+"don't you think"
+],
+[
+"فقط یک اشتباه کوچک",
+"only a small mistake"
+]
+]
+},
+{
+"w": "quantity",
+"fa": "در خرید مواد غذایی، کیفیت برای من مهم‌تر از مقدار است.",
+"en": "When buying food, quality matters more to me than quantity.",
+"alt": [
+"For groceries, I care more about quality than quantity.",
+"I'd rather buy less food of better quality."
+],
+"bd": [
+[
+"مقدار",
+"quantity"
+],
+[
+"خرید مواد غذایی",
+"buying food"
+],
+[
+"کیفیت",
+"quality"
+],
+[
+"مهم‌تر از",
+"matters more than"
+]
+]
+},
+{
+"w": "opt",
+"fa": "به جای تاکسی، تصمیم گرفتیم با مترو برویم تا پول پس‌انداز کنیم.",
+"en": "Instead of a taxi, we opted for the subway to save money.",
+"alt": [
+"We chose the subway over a cab to save a bit of cash.",
+"To save money, we went with the subway rather than a taxi."
+],
+"bd": [
+[
+"تصمیم گرفتیم...برویم",
+"we opted for"
+],
+[
+"به جای تاکسی",
+"instead of a taxi"
+],
+[
+"مترو",
+"the subway"
+],
+[
+"پول پس‌انداز کنیم",
+"to save money"
+]
+]
+},
+{
+"w": "tragedy",
+"fa": "بسته شدن آن کافه‌ی قدیمی برای همه‌ی اهل محل یک فاجعه‌ی کوچک بود.",
+"en": "The closure of that old café was a small tragedy for everyone in the neighborhood.",
+"alt": [
+"Everyone around here was heartbroken when that old café shut down.",
+"Losing that old café felt like a real tragedy to the locals."
+],
+"bd": [
+[
+"فاجعه",
+"tragedy"
+],
+[
+"بسته شدن",
+"the closure"
+],
+[
+"آن کافه‌ی قدیمی",
+"that old café"
+],
+[
+"اهل محل",
+"the neighborhood"
+]
+]
+},
+{
+"w": "pedestrian",
+"fa": "در این خیابان، عابران پیاده همیشه حق تقدم دارند.",
+"en": "On this street, pedestrians always have the right of way.",
+"alt": [
+"People on foot always have priority on this street.",
+"Drivers must always yield to pedestrians on this road."
+],
+"bd": [
+[
+"عابران پیاده",
+"pedestrians"
+],
+[
+"حق تقدم دارند",
+"have the right of way"
+],
+[
+"این خیابان",
+"this street"
+]
+]
+},
+{
+"w": "glance",
+"fa": "فقط نگاهی گذرا به منو انداختم و فوراً پاستا سفارش دادم.",
+"en": "I just glanced at the menu and immediately ordered the pasta.",
+"alt": [
+"One quick look at the menu and I went straight for the pasta.",
+"I barely looked at the menu before ordering the pasta."
+],
+"bd": [
+[
+"نگاهی گذرا انداختم",
+"I glanced"
+],
+[
+"منو",
+"the menu"
+],
+[
+"فوراً",
+"immediately"
+],
+[
+"پاستا سفارش دادم",
+"ordered the pasta"
+]
+]
+},
+{
+"w": "budget",
+"fa": "این ماه بودجه‌مان کم است، پس بیا شام را خانه درست کنیم.",
+"en": "Our budget is tight this month, so let's make dinner at home.",
+"alt": [
+"Money's a bit tight this month, so how about cooking at home tonight?",
+"We're on a tight budget this month; let's eat in."
+],
+"bd": [
+[
+"بودجه",
+"budget"
+],
+[
+"کم است",
+"is tight"
+],
+[
+"این ماه",
+"this month"
+],
+[
+"شام را خانه درست کنیم",
+"make dinner at home"
+]
+]
+},
+{
+"w": "nimble",
+"fa": "با اینکه هشتاد سالش است، هنوز خیلی چابک از پله‌ها بالا می‌رود.",
+"en": "Even though he's eighty, he's still very nimble on the stairs.",
+"alt": [
+"At eighty, he still climbs the stairs remarkably nimbly.",
+"He may be eighty, but he's still quick and agile on the stairs."
+],
+"bd": [
+[
+"چابک",
+"nimble"
+],
+[
+"با اینکه هشتاد سالش است",
+"even though he's eighty"
+],
+[
+"از پله‌ها بالا می‌رود",
+"climbs the stairs"
+]
+]
+},
+{
+"w": "manipulate",
+"fa": "مراقب باش؛ بچه‌ها خوب بلدند با گریه پدر و مادرشان را به بازی بگیرند!",
+"en": "Be careful; kids are very good at manipulating their parents by crying!",
+"alt": [
+"Watch out, children know exactly how to manipulate their parents with tears!",
+"Careful: kids are experts at using tears to get their way with parents!"
+],
+"bd": [
+[
+"به بازی بگیرند",
+"manipulate"
+],
+[
+"مراقب باش",
+"be careful"
+],
+[
+"با گریه",
+"by crying"
+],
+[
+"پدر و مادرشان",
+"their parents"
+]
+]
+},
+{
+"w": "reckless",
+"fa": "رانندگی بی‌احتیاط او بالاخره کار دستش داد و جریمه شد.",
+"en": "His reckless driving finally caught up with him, and he got a ticket.",
+"alt": [
+"He finally got a ticket for driving so recklessly.",
+"All that reckless driving eventually landed him a ticket."
+],
+"bd": [
+[
+"بی‌احتیاط",
+"reckless"
+],
+[
+"رانندگی",
+"driving"
+],
+[
+"کار دستش داد",
+"caught up with him"
+],
+[
+"جریمه شد",
+"he got a ticket"
+]
+]
+},
+{
+"w": "rescue",
+"fa": "آتش‌نشان‌ها گربه‌ی همسایه را از بالای درخت نجات دادند.",
+"en": "The firefighters rescued the neighbor's cat from the top of the tree.",
+"alt": [
+"Firefighters got the neighbor's cat down from the tree.",
+"The neighbor's cat had to be rescued from the treetop by firefighters."
+],
+"bd": [
+[
+"نجات دادند",
+"rescued"
+],
+[
+"آتش‌نشان‌ها",
+"the firefighters"
+],
+[
+"گربه‌ی همسایه",
+"the neighbor's cat"
+],
+[
+"بالای درخت",
+"the top of the tree"
+]
+]
+},
+{
+"w": "conference",
+"fa": "هفته‌ی آینده برای یک کنفرانس کاری به لیسبون می‌روم.",
+"en": "Next week I'm going to Lisbon for a work conference.",
+"alt": [
+"I'm off to Lisbon next week for a work conference.",
+"I've got a conference in Lisbon next week for work."
+],
+"bd": [
+[
+"کنفرانس",
+"conference"
+],
+[
+"هفته‌ی آینده",
+"next week"
+],
+[
+"کاری",
+"work"
+],
+[
+"لیسبون",
+"Lisbon"
+]
+]
+}
+];
+
+/* =========================================================
+   1b. READ-ALOUD (Web Speech API, built into the browser)
+   -----------------------------------------------------------
+   Voice quality is entirely up to the browser/OS; we can't
+   ship our own voice, but we CAN pick the best one available
+   and let Sheler switch if she prefers a different one.
+   ========================================================= */
+const SPEAKER_SVG = `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 9v6h4l5 5V4L8 9H4z"/>
+  <path d="M16.6 12c0-1.77-.77-3.3-2.02-4.24l0 8.47c1.25-.93 2.02-2.46 2.02-4.23z"/>
+  <path d="M14.6 4.5v2.02c2.9 1.06 5 3.85 5 7.13s-2.1 6.07-5 7.13v2.02c4-.15 7.2-3.53 7.2-9.15s-3.2-9-7.2-9.15z" opacity=".55"/>
+</svg>`;
+
+const TTS_SUPPORTED = ('speechSynthesis' in window);
+const VOICE_STORAGE_KEY = 'sheler_tts_voice_uri';
+let availableVoices = [];
+let selectedVoiceURI = localStorage.getItem(VOICE_STORAGE_KEY) || null;
+
+function speakBtnHtml(role, i, size){
+  const cls = size === 'sm' ? 'speak-btn speak-btn-sm' : 'speak-btn';
+  return `<button type="button" class="${cls}" data-role="${role}" data-i="${i}" aria-label="Play pronunciation" title="Listen">${SPEAKER_SVG}</button>`;
+}
+
+// Rank voices so the most natural-sounding ones (cloud/"Neural"/"Online"
+// voices most browsers ship alongside the old robotic default) sort first.
+function scoreVoice(v){
+  const name = v.name.toLowerCase();
+  let score = 0;
+  if(v.lang === 'en-US') score += 3;
+  else if(v.lang === 'en-GB') score += 2;
+  else if(v.lang.startsWith('en')) score += 1;
+  if(/natural|neural|online|premium|enhanced|plus/.test(name)) score += 6;
+  if(/google/.test(name)) score += 3;
+  if(/samantha|aria|jenny|guy|ava|serena|nicky/.test(name)) score += 2;
+  if(v.localService === false) score += 1; // cloud voices are usually higher quality
+  return score;
+}
+
+function loadVoices(){
+  if(!TTS_SUPPORTED) return;
+  const all = window.speechSynthesis.getVoices();
+  availableVoices = all.filter(v=>v.lang && v.lang.toLowerCase().startsWith('en'));
+  if(availableVoices.length === 0) availableVoices = all; // fallback, better than nothing
+  populateVoicePanel();
+}
+
+function populateVoicePanel(){
+  const sel = document.getElementById('voiceSelect');
+  const hint = document.getElementById('voiceHint');
+  if(!sel) return;
+  if(!TTS_SUPPORTED){
+    document.getElementById('voicePanel').style.display = 'none';
+    return;
+  }
+  if(availableVoices.length === 0){
+    sel.innerHTML = `<option>Loading voices…</option>`;
+    return;
+  }
+  const ranked = [...availableVoices].sort((a,b)=>scoreVoice(b)-scoreVoice(a));
+  sel.innerHTML = ranked.map(v=>
+    `<option value="${v.voiceURI}">${v.name} (${v.lang})${v.localService===false ? ' (online)' : ''}</option>`
+  ).join('');
+  const stillExists = selectedVoiceURI && ranked.some(v=>v.voiceURI===selectedVoiceURI);
+  selectedVoiceURI = stillExists ? selectedVoiceURI : ranked[0].voiceURI;
+  sel.value = selectedVoiceURI;
+  hint.textContent = 'Voices marked "online" or "Natural/Neural" usually sound the least robotic. Pick whichever is clearest for you.';
+}
+
+function getSelectedVoice(){
+  return availableVoices.find(v=>v.voiceURI === selectedVoiceURI) || null;
+}
+
+function speakText(text, btn){
+  if(!TTS_SUPPORTED) return;
+  window.speechSynthesis.cancel(); // stop anything currently playing
+  const utter = new SpeechSynthesisUtterance(text);
+  const voice = getSelectedVoice();
+  if(voice){ utter.voice = voice; utter.lang = voice.lang; }
+  else { utter.lang = 'en-US'; }
+  utter.rate = 0.95;   // a touch slower, easier for a learner to follow
+  utter.pitch = 1;
+  if(btn) btn.classList.add('speaking');
+  const clear = ()=>{ if(btn) btn.classList.remove('speaking'); };
+  utter.onend = clear;
+  utter.onerror = clear;
+  window.speechSynthesis.speak(utter);
+}
+
+function wireSpeakButtons(sentence){
+  if(!TTS_SUPPORTED){
+    document.querySelectorAll('.speak-btn').forEach(b=>{ b.style.display='none'; });
+    return;
+  }
+  document.querySelectorAll('.speak-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const role = btn.dataset.role;
+      const i = parseInt(btn.dataset.i, 10);
+      let text = '';
+      if(role === 'main') text = sentence.en;
+      else if(role === 'kw') text = sentence.w;
+      else if(role === 'alt') text = sentence.alt[i];
+      else if(role === 'chunk') text = sentence.bd[i][1];
+      if(text) speakText(text, btn);
+    });
+  });
+}
+
+if(TTS_SUPPORTED){
+  loadVoices();
+  // Most browsers load voices asynchronously; this fires when the real list is ready.
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+
+  document.getElementById('voiceSelect').addEventListener('change', (e)=>{
+    selectedVoiceURI = e.target.value;
+    localStorage.setItem(VOICE_STORAGE_KEY, selectedVoiceURI);
+  });
+  document.getElementById('tryVoiceBtn').addEventListener('click', (e)=>{
+    speakText("Hi Sheler, this is what this voice sounds like.", e.currentTarget);
+  });
+} else {
+  document.getElementById('voicePanel').style.display = 'none';
+}
+
+/* =========================================================
+   2. LEITNER SYSTEM CONFIG
+   ========================================================= */
+const BOX_COUNT = 5;
+const INTERVAL_DAYS = [0, 1, 3, 7, 14]; // days until due, indexed by box (1-5 -> index 0-4)
+const STORAGE_KEY = 'sheler_leitner_progress_daily_talk_v1';
+
+function todayStr(){
+  const d = new Date();
+  return d.toISOString().slice(0,10);
+}
+function addDays(dateStr, days){
+  const d = new Date(dateStr + 'T00:00:00');
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0,10);
+}
+
+function loadProgress(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw) return JSON.parse(raw);
+  }catch(e){ console.warn('Could not read progress', e); }
+  const fresh = {};
+  SENTENCES.forEach((s,i)=>{ fresh[i] = { box:1, due: todayStr() }; });
+  return fresh;
+}
+function saveProgress(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); }
+
+let progress = loadProgress();
+SENTENCES.forEach((s,i)=>{ if(!progress[i]) progress[i] = { box:1, due: todayStr() }; });
+saveProgress();
+
+/* =========================================================
+   3. QUEUE MANAGEMENT
+   ========================================================= */
+let todayQueue = [];
+let currentId = null;
+let revealed = false;
+
+function buildTodayQueue(){
+  const t = todayStr();
+  todayQueue = Object.keys(progress)
+    .map(k=>parseInt(k))
+    .filter(id => progress[id].due <= t);
+  shuffle(todayQueue);
+}
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+}
+function nextCard(){
+  revealed = false;
+  if(TTS_SUPPORTED) window.speechSynthesis.cancel();
+  if(todayQueue.length === 0){
+    currentId = null;
+    renderEmpty();
+    renderCabinet();
+    renderStatus();
+    return;
+  }
+  currentId = todayQueue[0];
+  renderCard();
+  renderCabinet();
+  renderStatus();
+}
+
+/* =========================================================
+   4. RENDERING
+   ========================================================= */
+const cardEl = document.getElementById('card');
+const cabinetEl = document.getElementById('cabinet');
+const statusEl = document.getElementById('statusLine');
+
+function renderCabinet(){
+  const counts = new Array(BOX_COUNT).fill(0);
+  Object.values(progress).forEach(p=> counts[p.box-1]++ );
+  const activeBox = currentId!==null ? progress[currentId].box : null;
+  cabinetEl.innerHTML = counts.map((c,i)=>{
+    const boxNum = i+1;
+    const isActive = boxNum === activeBox;
+    const intervalLabel = INTERVAL_DAYS[i] === 0 ? 'same day' : `${INTERVAL_DAYS[i]}d`;
+    return `<div class="drawer ${isActive?'active':''}" data-box="${boxNum}">
+      <div class="handle"></div>
+      <div class="label">Box ${boxNum}</div>
+      <div class="count">${c}</div>
+      <div class="interval">${intervalLabel}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderStatus(){
+  const total = SENTENCES.length;
+  const t = todayStr();
+  const dueTotal = Object.values(progress).filter(p=>p.due<=t).length;
+  const mastered = Object.values(progress).filter(p=>p.box===BOX_COUNT).length;
+  statusEl.innerHTML =
+    `<span><b>${todayQueue.length}</b> left today</span>` +
+    `<span><b>${dueTotal}</b> due overall</span>` +
+    `<span><b>${mastered}</b> mastered (Box ${BOX_COUNT})</span>` +
+    `<span><b>${total}</b> total cards</span>`;
+}
+
+function renderCard(){
+  const s = SENTENCES[currentId];
+  const p = progress[currentId];
+  const altHtml = (s.alt && s.alt.length) ? `
+    <div class="alt-block">
+      <div class="alt-title">Alternative phrasings</div>
+      <div class="alt-list">
+        ${s.alt.map((a,i)=>`
+          <div class="alt-item-row">
+            <div class="alt-item">${a}</div>
+            ${speakBtnHtml('alt', i, 'sm')}
+          </div>`).join('')}
+      </div>
+    </div>` : '';
+  cardEl.innerHTML = `
+    <div class="box-tag">Box ${p.box} of ${BOX_COUNT}</div>
+    <div class="fa-sentence">${s.fa}</div>
+    <hr class="divider">
+    <div class="answer-zone" id="answerZone">
+      ${s.w ? `<div class="kw-row"><span class="kw-label">Key word</span><span class="kw">${s.w}</span>${speakBtnHtml('kw', 0, 'sm')}</div>` : ''}
+      <div class="en-sentence-row">
+        <div class="en-sentence">${s.en}</div>
+        ${speakBtnHtml('main', 0, '')}
+      </div>
+      ${altHtml}
+      <div class="breakdown-title">Word by word</div>
+      <div class="breakdown">
+        ${s.bd.map((pair,i)=>`
+          <div class="chunk">
+            <span class="cfa">${pair[0]}</span>
+            <span class="chunk-en-row">
+              <span class="cen">${pair[1]}</span>
+              ${speakBtnHtml('chunk', i, 'sm')}
+            </span>
+          </div>`).join('')}
+      </div>
+    </div>
+    <div class="controls" id="controlsZone">
+      <button class="btn btn-reveal" id="revealBtn">Show answer</button>
+    </div>
+  `;
+  document.getElementById('revealBtn').addEventListener('click', showAnswer);
+  wireSpeakButtons(s);
+}
+
+function showAnswer(){
+  revealed = true;
+  document.getElementById('answerZone').classList.add('show');
+  const controls = document.getElementById('controlsZone');
+  controls.innerHTML = `
+    <div class="breakdown-title" style="margin-bottom:10px;">Did you get this right or wrong?</div>
+    <div class="self-assess">
+      <button class="btn btn-wrong" id="wrongBtn">Wrong</button>
+      <button class="btn btn-right" id="rightBtn">Right</button>
+    </div>
+  `;
+  document.getElementById('wrongBtn').addEventListener('click', ()=>answer(false));
+  document.getElementById('rightBtn').addEventListener('click', ()=>answer(true));
+}
+
+function renderEmpty(){
+  cardEl.innerHTML = `
+    <div class="empty-state">
+      <div class="big">All done for today 🎉</div>
+      <div class="small">No cards are due right now. Come back later, or reset to practice again.</div>
+      <div class="fa-small">همه‌ی جمله‌های امروز را تمام کردی</div>
+    </div>
+  `;
+}
+
+/* =========================================================
+   5. ANSWER LOGIC (Leitner rules)
+   ========================================================= */
+function answer(isRight){
+  const p = progress[currentId];
+  const drawerEl = document.querySelector(`.drawer[data-box="${p.box}"]`);
+  if(drawerEl){ drawerEl.classList.add('pulse'); setTimeout(()=>drawerEl.classList.remove('pulse'),650); }
+
+  if(isRight){
+    p.box = Math.min(p.box + 1, BOX_COUNT);
+    p.due = addDays(todayStr(), INTERVAL_DAYS[p.box-1]);
+    todayQueue.shift();
+  } else {
+    p.box = 1;
+    p.due = todayStr();
+    todayQueue.shift();
+    todayQueue.push(currentId);
+  }
+  saveProgress();
+  setTimeout(nextCard, 180);
+}
+
+/* =========================================================
+   6. RESET
+   ========================================================= */
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  if(!confirm('Reset all progress and start over from Box 1?')) return;
+  const fresh = {};
+  SENTENCES.forEach((s,i)=>{ fresh[i] = { box:1, due: todayStr() }; });
+  progress = fresh;
+  saveProgress();
+  buildTodayQueue();
+  nextCard();
+});
+
+/* =========================================================
+   7. INIT
+   ========================================================= */
+buildTodayQueue();
+nextCard();
+</script>
+</body>
+</html>
